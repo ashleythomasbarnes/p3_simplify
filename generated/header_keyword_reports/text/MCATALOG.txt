@@ -1,0 +1,1135 @@
+
+------------------------------------------------------------
+ESO Phase 3 header keyword guide
+Requested data product type: MCATALOG
+------------------------------------------------------------
+
+Checklist note: this includes keywords that are always mandatory, mandatory for ESO files, or mandatory when applicable.
+The placeholder "i" means a numbered series; include the numbered keywords needed for your data.
+
+------------------------------
+MCATALOG - Primary HDU mandatory keyword checklist
+------------------------------
+PRODCATG
+ORIGIN
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.)
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.)
+FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.)
+OBJECT
+TIMESYS
+MJD-OBS
+MJD-END
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.)
+OBIDi (for example: OBID1, OBID2, OBID3, etc.)
+OBSTECH
+PROCSOFT
+REFERENC
+PHOTSYS
+WAVELMIN
+WAVELMAX
+ABMAGLIM
+MAGLIMi (for example: MAGLIM1, MAGLIM2, MAGLIM3, etc.)
+CHECKSUM
+DATASUM
+FPRAia
+FPDEia
+SKYSQDEG
+M_EPOCH
+APMATCHD
+TXLNKi (for example: TXLNK1, TXLNK2, TXLNK3, etc.)
+TXRGF
+TXCTY
+NOESODAT
+
+------------------------------
+MCATALOG - Extension HDU mandatory keyword checklist
+------------------------------
+CHECKSUM
+DATASUM
+TFIELDS
+TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)
+TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)
+TCOMMi (for example: TCOMM1, TCOMM2, TCOMM3, etc.)
+TUNITi (for example: TUNIT1, TUNIT2, TUNIT3, etc.)
+TUCDi (for example: TUCD1, TUCD2, TUCD3, etc.)
+TNULLi (for example: TNULL1, TNULL2, TNULL3, etc.)
+EXTNAME
+
+------------------------------
+MCATALOG - Primary HDU
+------------------------------
+PRODCATG: Keyword mandatory
+ORIGIN: Keyword mandatory
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.): Keyword mandatory
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.): Keyword mandatory
+FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.): Keyword mandatory where applicable [footnote 35]
+OBJECT: Keyword mandatory
+TIMESYS: Keyword mandatory where applicable [footnote 38]
+MJD-OBS: Keyword mandatory
+MJD-END: Keyword mandatory
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.): Keyword mandatory for ESO files
+OBIDi (for example: OBID1, OBID2, OBID3, etc.): Keyword mandatory for ESO files
+OBSTECH: Keyword mandatory where applicable [footnote 39]
+PROCSOFT: Keyword mandatory
+REFERENC: Keyword mandatory [footnote 40]
+PHOTSYS: Keyword mandatory
+WAVELMIN: Keyword mandatory where applicable [footnote 44]
+WAVELMAX: Keyword mandatory where applicable [footnote 44]
+STOKES: Contact Phase 3 support to determine whether the keyword is required
+ABMAGLIM: Keyword mandatory where applicable [footnote 47]
+MAGLIMi (for example: MAGLIM1, MAGLIM2, MAGLIM3, etc.): Keyword mandatory where applicable [footnote 48]
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+FPRAia: Keyword mandatory where applicable [footnote 53]
+FPDEia: Keyword mandatory where applicable [footnote 53]
+SKYSQDEG: Keyword mandatory
+M_EPOCH: Keyword mandatory where applicable [footnote 55]
+APMATCHD: Keyword mandatory where applicable [footnote 56]
+TXLNKi (for example: TXLNK1, TXLNK2, TXLNK3, etc.): Keyword mandatory where applicable [footnote 57]
+TXRGF: Keyword mandatory where applicable [footnote 57]
+TXCTY: Keyword mandatory where applicable [footnote 57]
+NOESODAT: Keyword mandatory where applicable [footnote 59]
+TZEROi (for example: TZERO1, TZERO2, TZERO3, etc.): Keyword not allowed: the Phase 3 system will reject the file
+TSCALi (for example: TSCAL1, TSCAL2, TSCAL3, etc.): Keyword not allowed: the Phase 3 system will reject the file
+EXTVER: Keyword not allowed: the Phase 3 system will reject the file
+EXTLEVEL: Keyword not allowed: the Phase 3 system will reject the file
+
+------------------------------
+MCATALOG - Extension HDU
+------------------------------
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+TFIELDS: Keyword mandatory
+TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.): Keyword mandatory
+TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.): Keyword mandatory
+TCOMMi (for example: TCOMM1, TCOMM2, TCOMM3, etc.): Keyword mandatory
+TUNITi (for example: TUNIT1, TUNIT2, TUNIT3, etc.): Keyword mandatory [footnote 61]
+TUCDi (for example: TUCD1, TUCD2, TUCD3, etc.): Keyword mandatory
+TDMINi (for example: TDMIN1, TDMIN2, TDMIN3, etc.): It makes sense to provide the value, but it is optional
+TDMAXi (for example: TDMAX1, TDMAX2, TDMAX3, etc.): It makes sense to provide the value, but it is optional
+TNULLi (for example: TNULL1, TNULL2, TNULL3, etc.): Keyword mandatory where applicable [footnote 64]
+EXTNAME: Keyword mandatory where applicable [footnote 65]
+TZEROi (for example: TZERO1, TZERO2, TZERO3, etc.): Keyword not allowed: the Phase 3 system will reject the file
+TSCALi (for example: TSCAL1, TSCAL2, TSCAL3, etc.): Keyword not allowed: the Phase 3 system will reject the file
+EXTVER: Keyword not allowed: the Phase 3 system will reject the file
+EXTLEVEL: Keyword not allowed: the Phase 3 system will reject the file
+
+------------------------------
+MCATALOG - Referenced footnotes
+------------------------------
+35: Applicable to photometric catalogues as well as APEX catalogues.
+38: Must be present if the system used is other than UTC.
+39: Does not apply to catalogues for which no unique value of OBSTECH can be identified.
+40: If a refereed publication is not available at the time of the data release going public, the value can be left to an empty string.
+44: Applicable to spectroscopic and APEX catalogues. For photometric catalogues, the value is calculated by the Phase 3 system unless the combination (INSTRi, FILTERi) is not unique, in which case please contact Phase 3 operations support staff at https://support.eso.org/ to assess the correct values of the WAVELMIN/MAX keywords, to be added in the headers.
+47: For photometric catalogues. And if there is more than one filter, it is not applicable. Use MAGLIMi instead.
+48: For photometric catalogues with more than one filter.
+53: Not mandatory in case of complex footprints.
+55: Applicable to multi-epoch catalogues formatted according to section 12.5.1 only.
+56: For aperture-matched catalogues only.
+57: In case data link is used (see section 12.3).
+59: Applicable to products originating or containing data from a non-ESO facility.
+61: For quantities having no units of measurement, the value shall be set to an empty string.
+64: See section 5.18 and section 12.2.6 for applicability.
+65: A specific value is requested in particular cases: 'PHASE3PROVENANCE', 'PHASE3CATALOG', 'PHASE3FILELIST'.
+
+------------------------------
+MCATALOG - Example archive FITS headers
+Source: https://archive.eso.org/hdr?DpId=ADP.2025-07-30T14:32:33.277
+------------------------------
+HDU 0 - PRIMARY
+SIMPLE               = True
+BITPIX               = 8
+NAXIS                = 0
+EXTEND               = True
+OSA_FSID             = 730144440321
+FILTER               = 'MULTI'
+EPS_REG              = 'ATLAS'
+MJD-OBS              = 55790.243112606
+MJD-END              = 59236.36553004271
+OBSTECH              = 'IMAGE,OFFSET'
+PROG_ID              = 'MULTI'
+ORIGIN               = 'ESO-PARANAL'
+DATE                 = '2024-02-12T10:09:36'
+TELESCOP             = 'ESO-VST'
+INSTRUME             = 'OMEGACAM'
+PROCSOFT             = 'VDFS_ATLASDR5'
+FILTER1              = 'u_SDSS'
+MAGLIM1              = 21.55510480063302
+FILTER2              = 'g_SDSS'
+MAGLIM2              = 22.43148965101976
+FILTER3              = 'r_SDSS'
+MAGLIM3              = 22.36701333522797
+FILTER4              = 'i_SDSS'
+MAGLIM4              = 22.26591406928168
+FILTER5              = 'z_SDSS'
+SKYSQDEG             = 4814.277
+PRODCATG             = 'SCIENCE.MCATALOG'
+APMATCHD             = True
+IMATYPE              = 'TILE'
+ISAMP                = False
+REFERENC             = '2015MNRAS.451.4238S'
+PROGID1              = '177.A-3011(E)'
+PROGID2              = '177.A-3011(P)'
+PROGID3              = '177.A-3011(R)'
+PROGID4              = '177.A-3011(D)'
+PROGID5              = '177.A-3011(S)'
+PROGID6              = '177.A-3011(H)'
+PROGID7              = '177.A-3011(J)'
+PROGID8              = '177.A-3011(Q)'
+PROGID9              = '177.A-3011(K)'
+PROGID10             = '177.A-3011(N)'
+PROGID11             = '177.A-3011(O)'
+PROGID12             = '177.A-3011(I)'
+PROGID13             = '177.A-3011(T)'
+PROGID14             = '177.A-3011(M)'
+PROGID15             = '177.A-3011(L)'
+PROGID16             = '177.A-3011(B)'
+PROGID17             = '177.A-3011(C)'
+PROGID18             = '177.A-3011(F)'
+PROGID19             = '177.A-3011(G)'
+PROGID20             = '177.A-3011(A)'
+PHOTSYS              = 'AB'
+CHECKSUM             = '3pHAAo996oEAAo97'
+DATASUM              = '0'
+ARCFILE              = 'ADP.2025-07-30T14:32:33.277.fits'
+ORIGFILE             = 'atlas_er5_ugriz_catMetaData.fits'
+P3ORIG               = 'EDP'
+
+HDU 1 - PHASE3CATALOG
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 752
+NAXIS2               = 0
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 170
+TTYPE1               = 'IAUNAME'
+TFORM1               = '35A'
+TCOMM1               = 'IAU Name (not unique)'
+TINDX1               = True
+TUCD1                = 'meta.id'
+TUNIT1               = ''
+TTYPE2               = 'SOURCEID'
+TUNIT2               = ''
+TFORM2               = 'K'
+TCOMM2               = 'UID of this merged detection as assigned by merge algorithm'
+TINDX2               = True
+TUCD2                = 'meta.id;meta.main'
+TTYPE3               = 'CUEVENTID'
+TUNIT3               = ''
+TFORM3               = 'J'
+TCOMM3               = 'UID of curation event giving rise to this record'
+TUCD3                = 'meta.id'
+TNULL3               = -99999999
+TTYPE4               = 'FRAMESETID'
+TUNIT4               = ''
+TFORM4               = 'K'
+TCOMM4               = 'UID of the set of frames that this merged source comes from'
+TUCD4                = 'meta.id'
+TTYPE5               = 'RA2000'
+TFORM5               = 'D'
+TCOMM5               = 'Celestial Right Ascension'
+TINDX5               = True
+TUCD5                = 'pos.eq.ra;meta.main'
+TUNIT5               = 'deg'
+TTYPE6               = 'DEC2000'
+TFORM6               = 'D'
+TCOMM6               = 'Celestial Declination'
+TINDX6               = True
+TUCD6                = 'pos.eq.dec;meta.main'
+TUNIT6               = 'deg'
+TTYPE7               = 'L'
+TFORM7               = 'D'
+TCOMM7               = 'Galactic longitude'
+TUCD7                = 'pos.galactic.lon'
+TUNIT7               = 'deg'
+TTYPE8               = 'B'
+TFORM8               = 'D'
+TCOMM8               = 'Galactic latitude'
+TUCD8                = 'pos.galactic.lat'
+TUNIT8               = 'deg'
+TTYPE9               = 'LAMBDA'
+TFORM9               = 'D'
+TCOMM9               = 'SDSS system spherical co-ordinate 1'
+TUCD9                = 'pos'
+TUNIT9               = 'deg'
+TTYPE10              = 'ETA'
+TFORM10              = 'D'
+TCOMM10              = 'SDSS system spherical co-ordinate 2'
+TUCD10               = 'pos'
+TUNIT10              = 'deg'
+TTYPE11              = 'PRIORSEC'
+TUNIT11              = ''
+TFORM11              = 'K'
+TCOMM11              = 'Seam code for a unique (=0) or duplicated (!=0) source'
+TUCD11               = 'meta.code'
+TNULL11              = -99999999
+TTYPE12              = 'UMGPNT'
+TFORM12              = 'E'
+TCOMM12              = 'Point source colour U-G (using aperMag3)'
+TINDX12              = True
+TUCD12               = 'phot.color;em.opt.U;em.opt.B'
+TUNIT12              = 'mag'
+TTYPE13              = 'UMGPNTERR'
+TFORM13              = 'E'
+TCOMM13              = 'Error on point source colour U-G'
+TUCD13               = 'stat.error;em.opt.U;em.opt.B'
+TUNIT13              = 'mag'
+TTYPE14              = 'GMRPNT'
+TFORM14              = 'E'
+TCOMM14              = 'Point source colour G-R (using aperMag3)'
+TINDX14              = True
+TUCD14               = 'phot.color;em.opt.B;em.opt.R'
+TUNIT14              = 'mag'
+TTYPE15              = 'GMRPNTERR'
+TFORM15              = 'E'
+TCOMM15              = 'Error on point source colour G-R'
+TUCD15               = 'stat.error;em.opt.B;em.opt.R'
+TUNIT15              = 'mag'
+TTYPE16              = 'RMIPNT'
+TFORM16              = 'E'
+TCOMM16              = 'Point source colour R-I (using aperMag3)'
+TINDX16              = True
+TUCD16               = 'phot.color;em.opt.R;em.opt.I'
+TUNIT16              = 'mag'
+TTYPE17              = 'RMIPNTERR'
+TFORM17              = 'E'
+TCOMM17              = 'Error on point source colour R-I'
+TUCD17               = 'stat.error;em.opt.R;em.opt.I'
+TUNIT17              = 'mag'
+TTYPE18              = 'IMZPNT'
+TFORM18              = 'E'
+TCOMM18              = 'Point source colour I-Z (using aperMag3)'
+TINDX18              = True
+TUCD18               = 'phot.color;em.opt.I;em.opt.I'
+TUNIT18              = 'mag'
+TTYPE19              = 'IMZPNTERR'
+TFORM19              = 'E'
+TCOMM19              = 'Error on point source colour I-Z'
+TUCD19               = 'stat.error;em.opt.I;em.opt.I'
+TUNIT19              = 'mag'
+TTYPE20              = 'UMGEXT'
+TFORM20              = 'E'
+TCOMM20              = 'Extended source colour U-G (using aperMagNoAperCorr3)'
+TINDX20              = True
+TUCD20               = 'phot.color;em.opt.U;em.opt.B'
+TUNIT20              = 'mag'
+TTYPE21              = 'UMGEXTERR'
+TFORM21              = 'E'
+TCOMM21              = 'Error on extended source colour U-G'
+TUCD21               = 'stat.error;em.opt.U;em.opt.B'
+TUNIT21              = 'mag'
+TTYPE22              = 'GMREXT'
+TFORM22              = 'E'
+TCOMM22              = 'Extended source colour G-R (using aperMagNoAperCorr3)'
+TINDX22              = True
+TUCD22               = 'phot.color;em.opt.B;em.opt.R'
+TUNIT22              = 'mag'
+TTYPE23              = 'GMREXTERR'
+TFORM23              = 'E'
+TCOMM23              = 'Error on extended source colour G-R'
+TUCD23               = 'stat.error;em.opt.B;em.opt.R'
+TUNIT23              = 'mag'
+TTYPE24              = 'RMIEXT'
+TFORM24              = 'E'
+TCOMM24              = 'Extended source colour R-I (using aperMagNoAperCorr3)'
+TINDX24              = True
+TUCD24               = 'phot.color;em.opt.R;em.opt.I'
+TUNIT24              = 'mag'
+TTYPE25              = 'RMIEXTERR'
+TFORM25              = 'E'
+TCOMM25              = 'Error on extended source colour R-I'
+TUCD25               = 'stat.error;em.opt.R;em.opt.I'
+TUNIT25              = 'mag'
+TTYPE26              = 'IMZEXT'
+TFORM26              = 'E'
+TCOMM26              = 'Extended source colour I-Z (using aperMagNoAperCorr3)'
+TINDX26              = True
+TUCD26               = 'phot.color;em.opt.I;em.opt.I'
+TUNIT26              = 'mag'
+TTYPE27              = 'IMZEXTERR'
+TFORM27              = 'E'
+TCOMM27              = 'Error on extended source colour I-Z'
+TUCD27               = 'stat.error;em.opt.I;em.opt.I'
+TUNIT27              = 'mag'
+TTYPE28              = 'MERGEDCLASSSTAT'
+TUNIT28              = ''
+TFORM28              = 'E'
+TCOMM28              = 'Merged N(0,1) stellarness-of-profile statistic'
+TUCD28               = 'stat'
+TTYPE29              = 'MERGEDCLASS'
+TUNIT29              = ''
+TFORM29              = 'I'
+TCOMM29              = 'Class flag,1|0|-1|-2|-3|-9=gal|noise|star|probStar|probGal|saturated'
+TINDX29              = True
+TUCD29               = 'meta.code'
+TNULL29              = -9999
+TTYPE30              = 'PSTAR'
+TUNIT30              = ''
+TFORM30              = 'E'
+TCOMM30              = 'Probability that the source is a star'
+TUCD30               = 'stat.probability'
+TTYPE31              = 'PGALAXY'
+TUNIT31              = ''
+TFORM31              = 'E'
+TCOMM31              = 'Probability that the source is a galaxy'
+TUCD31               = 'stat.probability'
+TTYPE32              = 'PNOISE'
+TUNIT32              = ''
+TFORM32              = 'E'
+TCOMM32              = 'Probability that the source is noise'
+TUCD32               = 'stat.probability'
+TTYPE33              = 'PSATURATED'
+TUNIT33              = ''
+TFORM33              = 'E'
+TCOMM33              = 'Probability that the source is saturated'
+TUCD33               = 'stat.probability'
+TTYPE34              = 'EBV'
+TUNIT34              = ''
+TFORM34              = 'E'
+TCOMM34              = 'The galactic dust extinction value measured from the Schlegel maps.'
+TUCD34               = 'phys.absorption.gal'
+TTYPE35              = 'AU'
+TFORM35              = 'E'
+TCOMM35              = 'The galactic extinction correction in the U band'
+TUCD35               = 'phys.absorption.gal'
+TUNIT35              = 'mag'
+TTYPE36              = 'AG'
+TFORM36              = 'E'
+TCOMM36              = 'The galactic extinction correction in the G band'
+TUCD36               = 'phys.absorption.gal'
+TUNIT36              = 'mag'
+TTYPE37              = 'AR'
+TFORM37              = 'E'
+TCOMM37              = 'The galactic extinction correction in the R band'
+TUCD37               = 'phys.absorption.gal'
+TUNIT37              = 'mag'
+TTYPE38              = 'AI'
+TFORM38              = 'E'
+TCOMM38              = 'The galactic extinction correction in the I band'
+TUCD38               = 'phys.absorption.gal'
+TUNIT38              = 'mag'
+TTYPE39              = 'AZ'
+TFORM39              = 'E'
+TCOMM39              = 'The galactic extinction correction in the Z band'
+TUCD39               = 'phys.absorption.gal'
+TUNIT39              = 'mag'
+TTYPE40              = 'UMJD'
+TFORM40              = 'D'
+TCOMM40              = 'The mean Modified Julian Day of each detection'
+TUCD40               = 'time.epoch;em.opt.U'
+TUNIT40              = 'day'
+TTYPE41              = 'UPETROMAG'
+TFORM41              = 'E'
+TCOMM41              = 'Extended source U mag (Petrosian)'
+TUCD41               = 'phot.mag;em.opt.U'
+TUNIT41              = 'mag'
+TTYPE42              = 'UPETROMAGERR'
+TFORM42              = 'E'
+TCOMM42              = 'Error in extended source U mag (Petrosian)'
+TUCD42               = 'stat.error;phot.mag;em.opt.U'
+TUNIT42              = 'mag'
+TTYPE43              = 'UKRONMAG'
+TFORM43              = 'E'
+TCOMM43              = 'Extended source U mag (Kron)'
+TUCD43               = 'phot.mag;em.opt.U'
+TUNIT43              = 'mag'
+TTYPE44              = 'UKRONMAGERR'
+TFORM44              = 'E'
+TCOMM44              = 'Error in extended source U mag (Kron)'
+TUCD44               = 'stat.error;phot.mag;em.opt.U'
+TUNIT44              = 'mag'
+TTYPE45              = 'UAPERMAG3'
+TFORM45              = 'E'
+TCOMM45              = 'Default point source U aperture corrected mag (2.0 arcsec diam)'
+TINDX45              = True
+TUCD45               = 'phot.mag;em.opt.U'
+TUNIT45              = 'mag'
+TTYPE46              = 'UAPERMAG3ERR'
+TFORM46              = 'E'
+TCOMM46              = 'Error in default point source u aperture corrected mag (2.0 arcsec'
+TINDX46              = True
+TUCD46               = 'stat.error;phot.mag;em.opt.U'
+TUNIT46              = 'mag'
+TTYPE47              = 'UAPERMAG4'
+TFORM47              = 'E'
+TCOMM47              = 'Point source U aperture corrected mag (2.8 arcsec aperture diam)'
+TUCD47               = 'phot.mag;em.opt.U'
+TUNIT47              = 'mag'
+TTYPE48              = 'UAPERMAG4ERR'
+TFORM48              = 'E'
+TCOMM48              = 'Error in point source u aperture corrected mag (2.8 arcsec aperture'
+TUCD48               = 'stat.error;phot.mag;em.opt.U'
+TUNIT48              = 'mag'
+TTYPE49              = 'UAPERMAG6'
+TFORM49              = 'E'
+TCOMM49              = 'Point source U aperture corrected mag (5.7 arcsec aperture diam)'
+TUCD49               = 'phot.mag;em.opt.U'
+TUNIT49              = 'mag'
+TTYPE50              = 'UAPERMAG6ERR'
+TFORM50              = 'E'
+TCOMM50              = 'Error in point source u aperture corrected mag (5.7 arcsec aperture'
+TUCD50               = 'stat.error;phot.mag;em.opt.U'
+TUNIT50              = 'mag'
+TTYPE51              = 'UAPERMAGNOAPERCORR3'
+TFORM51              = 'E'
+TCOMM51              = 'Default extended source U aperture corrected mag (2.0 arcsec diam)'
+TUCD51               = 'phot.mag;em.opt.U'
+TUNIT51              = 'mag'
+TTYPE52              = 'UAPERMAGNOAPERCORR4'
+TFORM52              = 'E'
+TCOMM52              = 'Extended source U aperture mag (2.8 arcsec aperture diameter)'
+TUCD52               = 'phot.mag;em.opt.U'
+TUNIT52              = 'mag'
+TTYPE53              = 'UAPERMAGNOAPERCORR6'
+TFORM53              = 'E'
+TCOMM53              = 'Extended source U aperture mag (5.7 arcsec aperture diameter)'
+TUCD53               = 'phot.mag;em.opt.U'
+TUNIT53              = 'mag'
+TTYPE54              = 'UHLCORSMJRADAS'
+TFORM54              = 'E'
+TCOMM54              = 'Seeing corrected half-light, semi-major axis in U band'
+TUCD54               = 'phys.angSize;em.opt.U'
+TUNIT54              = 'arcsec'
+TTYPE55              = 'UGAUSIG'
+TFORM55              = 'E'
+TCOMM55              = 'RMS of axes of ellipse fit in U'
+TUCD55               = 'src.morph.param;em.opt.U'
+TUNIT55              = 'pix'
+TTYPE56              = 'UELL'
+TUNIT56              = ''
+TFORM56              = 'E'
+TCOMM56              = '1-b/a, where a/b=semi-major/minor axes in U'
+TUCD56               = 'src.ellipticity;em.opt.U'
+TTYPE57              = 'UPA'
+TFORM57              = 'E'
+TCOMM57              = 'ellipse fit celestial orientation in U'
+TUCD57               = 'pos.posAng;em.opt.U'
+TUNIT57              = 'deg'
+TTYPE58              = 'UERRBITS'
+TUNIT58              = ''
+TFORM58              = 'J'
+TCOMM58              = 'processing warning/error bitwise flags in U'
+TINDX58              = True
+TUCD58               = 'meta.code;em.opt.U'
+TNULL58              = -99999999
+TTYPE59              = 'UAVERAGECONF'
+TUNIT59              = ''
+TFORM59              = 'E'
+TCOMM59              = 'average confidence in 2 arcsec diam default aperture 3 U'
+TUCD59               = 'stat.likelihood;em.opt.U'
+TTYPE60              = 'UCLASS'
+TUNIT60              = ''
+TFORM60              = 'I'
+TCOMM60              = 'discrete image classification flag in U'
+TUCD60               = 'src.class;em.opt.U'
+TNULL60              = -9999
+TTYPE61              = 'UCLASSSTAT'
+TUNIT61              = ''
+TFORM61              = 'E'
+TCOMM61              = 'N(0,1) stellarness-of-profile statistic in U'
+TUCD61               = 'stat;em.opt.U'
+TTYPE62              = 'UPPERRBITS'
+TUNIT62              = ''
+TFORM62              = 'J'
+TCOMM62              = 'additional WFAU post-processing error bits in U'
+TUCD62               = 'meta.code;em.opt.U'
+TNULL62              = 0
+TTYPE63              = 'USEQNUM'
+TUNIT63              = ''
+TFORM63              = 'J'
+TCOMM63              = 'the running number of the U detection'
+TUCD63               = 'meta.id;em.opt.U'
+TNULL63              = -99999999
+TTYPE64              = 'UXI'
+TFORM64              = 'E'
+TCOMM64              = 'Offset of U detection from master position (+east/-west)'
+TUCD64               = 'pos.eq.ra;arith.diff;em.opt.U'
+TUNIT64              = 'arcsec'
+TTYPE65              = 'UETA'
+TFORM65              = 'E'
+TCOMM65              = 'Offset of U detection from master position (+north/-south)'
+TUCD65               = 'pos.eq.dec;arith.diff;em.opt.U'
+TUNIT65              = 'arcsec'
+TTYPE66              = 'GMJD'
+TFORM66              = 'D'
+TCOMM66              = 'The mean Modified Julian Day of each detection'
+TUCD66               = 'time.epoch;em.opt.B'
+TUNIT66              = 'day'
+TTYPE67              = 'GPETROMAG'
+TFORM67              = 'E'
+TCOMM67              = 'Extended source G mag (Petrosian)'
+TUCD67               = 'phot.mag;em.opt.B'
+TUNIT67              = 'mag'
+TTYPE68              = 'GPETROMAGERR'
+TFORM68              = 'E'
+TCOMM68              = 'Error in extended source G mag (Petrosian)'
+TUCD68               = 'stat.error;phot.mag;em.opt.B'
+TUNIT68              = 'mag'
+TTYPE69              = 'GKRONMAG'
+TFORM69              = 'E'
+TCOMM69              = 'Extended source G mag (Kron)'
+TUCD69               = 'phot.mag;em.opt.B'
+TUNIT69              = 'mag'
+TTYPE70              = 'GKRONMAGERR'
+TFORM70              = 'E'
+TCOMM70              = 'Error in extended source G mag (Kron)'
+TUCD70               = 'stat.error;phot.mag;em.opt.B'
+TUNIT70              = 'mag'
+TTYPE71              = 'GAPERMAG3'
+TFORM71              = 'E'
+TCOMM71              = 'Default point source G aperture corrected mag (2.0 arcsec diam)'
+TINDX71              = True
+TUCD71               = 'phot.mag;em.opt.B'
+TUNIT71              = 'mag'
+TTYPE72              = 'GAPERMAG3ERR'
+TFORM72              = 'E'
+TCOMM72              = 'Error in default point source g aperture corrected mag (2.0 arcsec'
+TINDX72              = True
+TUCD72               = 'stat.error;phot.mag;em.opt.B'
+TUNIT72              = 'mag'
+TTYPE73              = 'GAPERMAG4'
+TFORM73              = 'E'
+TCOMM73              = 'Point source G aperture corrected mag (2.8 arcsec aperture diam)'
+TUCD73               = 'phot.mag;em.opt.B'
+TUNIT73              = 'mag'
+TTYPE74              = 'GAPERMAG4ERR'
+TFORM74              = 'E'
+TCOMM74              = 'Error in point source g aperture corrected mag (2.8 arcsec aperture'
+TUCD74               = 'stat.error;phot.mag;em.opt.B'
+TUNIT74              = 'mag'
+TTYPE75              = 'GAPERMAG6'
+TFORM75              = 'E'
+TCOMM75              = 'Point source G aperture corrected mag (5.7 arcsec aperture diam)'
+TUCD75               = 'phot.mag;em.opt.B'
+TUNIT75              = 'mag'
+TTYPE76              = 'GAPERMAG6ERR'
+TFORM76              = 'E'
+TCOMM76              = 'Error in point source g aperture corrected mag (5.7 arcsec aperture'
+TUCD76               = 'stat.error;phot.mag;em.opt.B'
+TUNIT76              = 'mag'
+TTYPE77              = 'GAPERMAGNOAPERCORR3'
+TFORM77              = 'E'
+TCOMM77              = 'Default extended source G aperture corrected mag (2.0 arcsec diam)'
+TUCD77               = 'phot.mag;em.opt.B'
+TUNIT77              = 'mag'
+TTYPE78              = 'GAPERMAGNOAPERCORR4'
+TFORM78              = 'E'
+TCOMM78              = 'Extended source G aperture mag (2.8 arcsec aperture diameter)'
+TUCD78               = 'phot.mag;em.opt.B'
+TUNIT78              = 'mag'
+TTYPE79              = 'GAPERMAGNOAPERCORR6'
+TFORM79              = 'E'
+TCOMM79              = 'Extended source G aperture mag (5.7 arcsec aperture diameter)'
+TUCD79               = 'phot.mag;em.opt.B'
+TUNIT79              = 'mag'
+TTYPE80              = 'GHLCORSMJRADAS'
+TFORM80              = 'E'
+TCOMM80              = 'Seeing corrected half-light, semi-major axis in G band'
+TUCD80               = 'phys.angSize;em.opt.B'
+TUNIT80              = 'arcsec'
+TTYPE81              = 'GGAUSIG'
+TFORM81              = 'E'
+TCOMM81              = 'RMS of axes of ellipse fit in G'
+TUCD81               = 'src.morph.param;em.opt.B'
+TUNIT81              = 'pix'
+TTYPE82              = 'GELL'
+TUNIT82              = ''
+TFORM82              = 'E'
+TCOMM82              = '1-b/a, where a/b=semi-major/minor axes in G'
+TUCD82               = 'src.ellipticity;em.opt.B'
+TTYPE83              = 'GPA'
+TFORM83              = 'E'
+TCOMM83              = 'ellipse fit celestial orientation in G'
+TUCD83               = 'pos.posAng;em.opt.B'
+TUNIT83              = 'deg'
+TTYPE84              = 'GERRBITS'
+TUNIT84              = ''
+TFORM84              = 'J'
+TCOMM84              = 'processing warning/error bitwise flags in G'
+TINDX84              = True
+TUCD84               = 'meta.code;em.opt.B'
+TNULL84              = -99999999
+TTYPE85              = 'GAVERAGECONF'
+TUNIT85              = ''
+TFORM85              = 'E'
+TCOMM85              = 'average confidence in 2 arcsec diam default aperture 3 G'
+TUCD85               = 'stat.likelihood;em.opt.B'
+TTYPE86              = 'GCLASS'
+TUNIT86              = ''
+TFORM86              = 'I'
+TCOMM86              = 'discrete image classification flag in G'
+TUCD86               = 'src.class;em.opt.B'
+TNULL86              = -9999
+TTYPE87              = 'GCLASSSTAT'
+TUNIT87              = ''
+TFORM87              = 'E'
+TCOMM87              = 'N(0,1) stellarness-of-profile statistic in G'
+TUCD87               = 'stat;em.opt.B'
+TTYPE88              = 'GPPERRBITS'
+TUNIT88              = ''
+TFORM88              = 'J'
+TCOMM88              = 'additional WFAU post-processing error bits in G'
+TUCD88               = 'meta.code;em.opt.B'
+TNULL88              = 0
+TTYPE89              = 'GSEQNUM'
+TUNIT89              = ''
+TFORM89              = 'J'
+TCOMM89              = 'the running number of the G detection'
+TUCD89               = 'meta.id;em.opt.B'
+TNULL89              = -99999999
+TTYPE90              = 'GXI'
+TFORM90              = 'E'
+TCOMM90              = 'Offset of G detection from master position (+east/-west)'
+TUCD90               = 'pos.eq.ra;arith.diff;em.opt.B'
+TUNIT90              = 'arcsec'
+TTYPE91              = 'GETA'
+TFORM91              = 'E'
+TCOMM91              = 'Offset of G detection from master position (+north/-south)'
+TUCD91               = 'pos.eq.dec;arith.diff;em.opt.B'
+TUNIT91              = 'arcsec'
+TTYPE92              = 'RMJD'
+TFORM92              = 'D'
+TCOMM92              = 'The mean Modified Julian Day of each detection'
+TUCD92               = 'time.epoch;em.opt.R'
+TUNIT92              = 'day'
+TTYPE93              = 'RPETROMAG'
+TFORM93              = 'E'
+TCOMM93              = 'Extended source R mag (Petrosian)'
+TUCD93               = 'phot.mag;em.opt.R'
+TUNIT93              = 'mag'
+TTYPE94              = 'RPETROMAGERR'
+TFORM94              = 'E'
+TCOMM94              = 'Error in extended source R mag (Petrosian)'
+TUCD94               = 'stat.error;phot.mag;em.opt.R'
+TUNIT94              = 'mag'
+TTYPE95              = 'RKRONMAG'
+TFORM95              = 'E'
+TCOMM95              = 'Extended source R mag (Kron)'
+TUCD95               = 'phot.mag;em.opt.R'
+TUNIT95              = 'mag'
+TTYPE96              = 'RKRONMAGERR'
+TFORM96              = 'E'
+TCOMM96              = 'Error in extended source R mag (Kron)'
+TUCD96               = 'stat.error;phot.mag;em.opt.R'
+TUNIT96              = 'mag'
+TTYPE97              = 'RAPERMAG3'
+TFORM97              = 'E'
+TCOMM97              = 'Default point source R aperture corrected mag (2.0 arcsec diam)'
+TINDX97              = True
+TUCD97               = 'phot.mag;em.opt.R'
+TUNIT97              = 'mag'
+TTYPE98              = 'RAPERMAG3ERR'
+TFORM98              = 'E'
+TCOMM98              = 'Error in default point source r aperture corrected mag (2.0 arcsec'
+TINDX98              = True
+TUCD98               = 'stat.error;phot.mag;em.opt.R'
+TUNIT98              = 'mag'
+TTYPE99              = 'RAPERMAG4'
+TFORM99              = 'E'
+TCOMM99              = 'Point source R aperture corrected mag (2.8 arcsec aperture diam)'
+TUCD99               = 'phot.mag;em.opt.R'
+TUNIT99              = 'mag'
+TTYPE100             = 'RAPERMAG4ERR'
+TFORM100             = 'E'
+TCOMM100             = 'Error in point source r aperture corrected mag (2.8 arcsec aperture'
+TUCD100              = 'stat.error;phot.mag;em.opt.R'
+TUNIT100             = 'mag'
+TTYPE101             = 'RAPERMAG6'
+TFORM101             = 'E'
+TCOMM101             = 'Point source R aperture corrected mag (5.7 arcsec aperture diam)'
+TUCD101              = 'phot.mag;em.opt.R'
+TUNIT101             = 'mag'
+TTYPE102             = 'RAPERMAG6ERR'
+TFORM102             = 'E'
+TCOMM102             = 'Error in point source r aperture corrected mag (5.7 arcsec aperture'
+TUCD102              = 'stat.error;phot.mag;em.opt.R'
+TUNIT102             = 'mag'
+TTYPE103             = 'RAPERMAGNOAPERCORR3'
+TFORM103             = 'E'
+TCOMM103             = 'Default extended source R aperture corrected mag (2.0 arcsec diam)'
+TUCD103              = 'phot.mag;em.opt.R'
+TUNIT103             = 'mag'
+TTYPE104             = 'RAPERMAGNOAPERCORR4'
+TFORM104             = 'E'
+TCOMM104             = 'Extended source R aperture mag (2.8 arcsec aperture diameter)'
+TUCD104              = 'phot.mag;em.opt.R'
+TUNIT104             = 'mag'
+TTYPE105             = 'RAPERMAGNOAPERCORR6'
+TFORM105             = 'E'
+TCOMM105             = 'Extended source R aperture mag (5.7 arcsec aperture diameter)'
+TUCD105              = 'phot.mag;em.opt.R'
+TUNIT105             = 'mag'
+TTYPE106             = 'RHLCORSMJRADAS'
+TFORM106             = 'E'
+TCOMM106             = 'Seeing corrected half-light, semi-major axis in R band'
+TUCD106              = 'phys.angSize;em.opt.R'
+TUNIT106             = 'arcsec'
+TTYPE107             = 'RGAUSIG'
+TFORM107             = 'E'
+TCOMM107             = 'RMS of axes of ellipse fit in R'
+TUCD107              = 'src.morph.param;em.opt.R'
+TUNIT107             = 'pix'
+TTYPE108             = 'RELL'
+TUNIT108             = ''
+TFORM108             = 'E'
+TCOMM108             = '1-b/a, where a/b=semi-major/minor axes in R'
+TUCD108              = 'src.ellipticity;em.opt.R'
+TTYPE109             = 'RPA'
+TFORM109             = 'E'
+TCOMM109             = 'ellipse fit celestial orientation in R'
+TUCD109              = 'pos.posAng;em.opt.R'
+TUNIT109             = 'deg'
+TTYPE110             = 'RERRBITS'
+TUNIT110             = ''
+TFORM110             = 'J'
+TCOMM110             = 'processing warning/error bitwise flags in R'
+TINDX110             = True
+TUCD110              = 'meta.code;em.opt.R'
+TNULL110             = -99999999
+TTYPE111             = 'RAVERAGECONF'
+TUNIT111             = ''
+TFORM111             = 'E'
+TCOMM111             = 'average confidence in 2 arcsec diam default aperture 3 R'
+TUCD111              = 'stat.likelihood;em.opt.R'
+TTYPE112             = 'RCLASS'
+TUNIT112             = ''
+TFORM112             = 'I'
+TCOMM112             = 'discrete image classification flag in R'
+TUCD112              = 'src.class;em.opt.R'
+TNULL112             = -9999
+TTYPE113             = 'RCLASSSTAT'
+TUNIT113             = ''
+TFORM113             = 'E'
+TCOMM113             = 'N(0,1) stellarness-of-profile statistic in R'
+TUCD113              = 'stat;em.opt.R'
+TTYPE114             = 'RPPERRBITS'
+TUNIT114             = ''
+TFORM114             = 'J'
+TCOMM114             = 'additional WFAU post-processing error bits in R'
+TUCD114              = 'meta.code;em.opt.R'
+TNULL114             = 0
+TTYPE115             = 'RSEQNUM'
+TUNIT115             = ''
+TFORM115             = 'J'
+TCOMM115             = 'the running number of the R detection'
+TUCD115              = 'meta.id;em.opt.R'
+TNULL115             = -99999999
+TTYPE116             = 'RXI'
+TFORM116             = 'E'
+TCOMM116             = 'Offset of R detection from master position (+east/-west)'
+TUCD116              = 'pos.eq.ra;arith.diff;em.opt.R'
+TUNIT116             = 'arcsec'
+TTYPE117             = 'RETA'
+TFORM117             = 'E'
+TCOMM117             = 'Offset of R detection from master position (+north/-south)'
+TUCD117              = 'pos.eq.dec;arith.diff;em.opt.R'
+TUNIT117             = 'arcsec'
+TTYPE118             = 'IMJD'
+TFORM118             = 'D'
+TCOMM118             = 'The mean Modified Julian Day of each detection'
+TUCD118              = 'time.epoch;em.opt.I'
+TUNIT118             = 'day'
+TTYPE119             = 'IPETROMAG'
+TFORM119             = 'E'
+TCOMM119             = 'Extended source I mag (Petrosian)'
+TUCD119              = 'phot.mag;em.opt.I'
+TUNIT119             = 'mag'
+TTYPE120             = 'IPETROMAGERR'
+TFORM120             = 'E'
+TCOMM120             = 'Error in extended source I mag (Petrosian)'
+TUCD120              = 'stat.error;phot.mag;em.opt.I'
+TUNIT120             = 'mag'
+TTYPE121             = 'IKRONMAG'
+TFORM121             = 'E'
+TCOMM121             = 'Extended source I mag (Kron)'
+TUCD121              = 'phot.mag;em.opt.I'
+TUNIT121             = 'mag'
+TTYPE122             = 'IKRONMAGERR'
+TFORM122             = 'E'
+TCOMM122             = 'Error in extended source I mag (Kron)'
+TUCD122              = 'stat.error;phot.mag;em.opt.I'
+TUNIT122             = 'mag'
+TTYPE123             = 'IAPERMAG3'
+TFORM123             = 'E'
+TCOMM123             = 'Default point source I aperture corrected mag (2.0 arcsec diam)'
+TINDX123             = True
+TUCD123              = 'phot.mag;em.opt.I'
+TUNIT123             = 'mag'
+TTYPE124             = 'IAPERMAG3ERR'
+TFORM124             = 'E'
+TCOMM124             = 'Error in default point source i aperture corrected mag (2.0 arcsec'
+TINDX124             = True
+TUCD124              = 'stat.error;phot.mag;em.opt.I'
+TUNIT124             = 'mag'
+TTYPE125             = 'IAPERMAG4'
+TFORM125             = 'E'
+TCOMM125             = 'Point source I aperture corrected mag (2.8 arcsec aperture diam)'
+TUCD125              = 'phot.mag;em.opt.I'
+TUNIT125             = 'mag'
+TTYPE126             = 'IAPERMAG4ERR'
+TFORM126             = 'E'
+TCOMM126             = 'Error in point source i aperture corrected mag (2.8 arcsec aperture'
+TUCD126              = 'stat.error;phot.mag;em.opt.I'
+TUNIT126             = 'mag'
+TTYPE127             = 'IAPERMAG6'
+TFORM127             = 'E'
+TCOMM127             = 'Point source I aperture corrected mag (5.7 arcsec aperture diam)'
+TUCD127              = 'phot.mag;em.opt.I'
+TUNIT127             = 'mag'
+TTYPE128             = 'IAPERMAG6ERR'
+TFORM128             = 'E'
+TCOMM128             = 'Error in point source i aperture corrected mag (5.7 arcsec aperture'
+TUCD128              = 'stat.error;phot.mag;em.opt.I'
+TUNIT128             = 'mag'
+TTYPE129             = 'IAPERMAGNOAPERCORR3'
+TFORM129             = 'E'
+TCOMM129             = 'Default extended source I aperture corrected mag (2.0 arcsec diam)'
+TUCD129              = 'phot.mag;em.opt.I'
+TUNIT129             = 'mag'
+TTYPE130             = 'IAPERMAGNOAPERCORR4'
+TFORM130             = 'E'
+TCOMM130             = 'Extended source I aperture mag (2.8 arcsec aperture diameter)'
+TUCD130              = 'phot.mag;em.opt.I'
+TUNIT130             = 'mag'
+TTYPE131             = 'IAPERMAGNOAPERCORR6'
+TFORM131             = 'E'
+TCOMM131             = 'Extended source I aperture mag (5.7 arcsec aperture diameter)'
+TUCD131              = 'phot.mag;em.opt.I'
+TUNIT131             = 'mag'
+TTYPE132             = 'IHLCORSMJRADAS'
+TFORM132             = 'E'
+TCOMM132             = 'Seeing corrected half-light, semi-major axis in I band'
+TUCD132              = 'phys.angSize;em.opt.I'
+TUNIT132             = 'arcsec'
+TTYPE133             = 'IGAUSIG'
+TFORM133             = 'E'
+TCOMM133             = 'RMS of axes of ellipse fit in I'
+TUCD133              = 'src.morph.param;em.opt.I'
+TUNIT133             = 'pix'
+TTYPE134             = 'IELL'
+TUNIT134             = ''
+TFORM134             = 'E'
+TCOMM134             = '1-b/a, where a/b=semi-major/minor axes in I'
+TUCD134              = 'src.ellipticity;em.opt.I'
+TTYPE135             = 'IPA'
+TFORM135             = 'E'
+TCOMM135             = 'ellipse fit celestial orientation in I'
+TUCD135              = 'pos.posAng;em.opt.I'
+TUNIT135             = 'deg'
+TTYPE136             = 'IERRBITS'
+TUNIT136             = ''
+TFORM136             = 'J'
+TCOMM136             = 'processing warning/error bitwise flags in I'
+TINDX136             = True
+TUCD136              = 'meta.code;em.opt.I'
+TNULL136             = -99999999
+TTYPE137             = 'IAVERAGECONF'
+TUNIT137             = ''
+TFORM137             = 'E'
+TCOMM137             = 'average confidence in 2 arcsec diam default aperture 3 I'
+TUCD137              = 'stat.likelihood;em.opt.I'
+TTYPE138             = 'ICLASS'
+TUNIT138             = ''
+TFORM138             = 'I'
+TCOMM138             = 'discrete image classification flag in I'
+TUCD138              = 'src.class;em.opt.I'
+TNULL138             = -9999
+TTYPE139             = 'ICLASSSTAT'
+TUNIT139             = ''
+TFORM139             = 'E'
+TCOMM139             = 'N(0,1) stellarness-of-profile statistic in I'
+TUCD139              = 'stat;em.opt.I'
+TTYPE140             = 'IPPERRBITS'
+TUNIT140             = ''
+TFORM140             = 'J'
+TCOMM140             = 'additional WFAU post-processing error bits in I'
+TUCD140              = 'meta.code;em.opt.I'
+TNULL140             = 0
+TTYPE141             = 'ISEQNUM'
+TUNIT141             = ''
+TFORM141             = 'J'
+TCOMM141             = 'the running number of the I detection'
+TUCD141              = 'meta.id;em.opt.I'
+TNULL141             = -99999999
+TTYPE142             = 'IXI'
+TFORM142             = 'E'
+TCOMM142             = 'Offset of I detection from master position (+east/-west)'
+TUCD142              = 'pos.eq.ra;arith.diff;em.opt.I'
+TUNIT142             = 'arcsec'
+TTYPE143             = 'IETA'
+TFORM143             = 'E'
+TCOMM143             = 'Offset of I detection from master position (+north/-south)'
+TUCD143              = 'pos.eq.dec;arith.diff;em.opt.I'
+TUNIT143             = 'arcsec'
+TTYPE144             = 'ZMJD'
+TFORM144             = 'D'
+TCOMM144             = 'The mean Modified Julian Day of each detection'
+TUCD144              = 'time.epoch;em.opt.I'
+TUNIT144             = 'day'
+TTYPE145             = 'ZPETROMAG'
+TFORM145             = 'E'
+TCOMM145             = 'Extended source Z mag (Petrosian)'
+TUCD145              = 'phot.mag;em.opt.I'
+TUNIT145             = 'mag'
+TTYPE146             = 'ZPETROMAGERR'
+TFORM146             = 'E'
+TCOMM146             = 'Error in extended source Z mag (Petrosian)'
+TUCD146              = 'stat.error;phot.mag;em.opt.I'
+TUNIT146             = 'mag'
+TTYPE147             = 'ZKRONMAG'
+TFORM147             = 'E'
+TCOMM147             = 'Extended source Z mag (Kron)'
+TUCD147              = 'phot.mag;em.opt.I'
+TUNIT147             = 'mag'
+TTYPE148             = 'ZKRONMAGERR'
+TFORM148             = 'E'
+TCOMM148             = 'Error in extended source Z mag (Kron)'
+TUCD148              = 'stat.error;phot.mag;em.opt.I'
+TUNIT148             = 'mag'
+TTYPE149             = 'ZAPERMAG3'
+TFORM149             = 'E'
+TCOMM149             = 'Default point source Z aperture corrected mag (2.0 arcsec diam)'
+TINDX149             = True
+TUCD149              = 'phot.mag;em.opt.I'
+TUNIT149             = 'mag'
+TTYPE150             = 'ZAPERMAG3ERR'
+TFORM150             = 'E'
+TCOMM150             = 'Error in default point source z aperture corrected mag (2.0 arcsec'
+TINDX150             = True
+TUCD150              = 'stat.error;phot.mag;em.opt.I'
+TUNIT150             = 'mag'
+TTYPE151             = 'ZAPERMAG4'
+TFORM151             = 'E'
+TCOMM151             = 'Point source Z aperture corrected mag (2.8 arcsec aperture diam)'
+TUCD151              = 'phot.mag;em.opt.I'
+TUNIT151             = 'mag'
+TTYPE152             = 'ZAPERMAG4ERR'
+TFORM152             = 'E'
+TCOMM152             = 'Error in point source z aperture corrected mag (2.8 arcsec aperture'
+TUCD152              = 'stat.error;phot.mag;em.opt.I'
+TUNIT152             = 'mag'
+TTYPE153             = 'ZAPERMAG6'
+TFORM153             = 'E'
+TCOMM153             = 'Point source Z aperture corrected mag (5.7 arcsec aperture diam)'
+TUCD153              = 'phot.mag;em.opt.I'
+TUNIT153             = 'mag'
+TTYPE154             = 'ZAPERMAG6ERR'
+TFORM154             = 'E'
+TCOMM154             = 'Error in point source z aperture corrected mag (5.7 arcsec aperture'
+TUCD154              = 'stat.error;phot.mag;em.opt.I'
+TUNIT154             = 'mag'
+TTYPE155             = 'ZAPERMAGNOAPERCORR3'
+TFORM155             = 'E'
+TCOMM155             = 'Default extended source Z aperture corrected mag (2.0 arcsec diam)'
+TUCD155              = 'phot.mag;em.opt.I'
+TUNIT155             = 'mag'
+TTYPE156             = 'ZAPERMAGNOAPERCORR4'
+TFORM156             = 'E'
+TCOMM156             = 'Extended source Z aperture mag (2.8 arcsec aperture diameter)'
+TUCD156              = 'phot.mag;em.opt.I'
+TUNIT156             = 'mag'
+TTYPE157             = 'ZAPERMAGNOAPERCORR6'
+TFORM157             = 'E'
+TCOMM157             = 'Extended source Z aperture mag (5.7 arcsec aperture diameter)'
+TUCD157              = 'phot.mag;em.opt.I'
+TUNIT157             = 'mag'
+TTYPE158             = 'ZHLCORSMJRADAS'
+TFORM158             = 'E'
+TCOMM158             = 'Seeing corrected half-light, semi-major axis in Z band'
+TUCD158              = 'phys.angSize;em.opt.I'
+TUNIT158             = 'arcsec'
+TTYPE159             = 'ZGAUSIG'
+TFORM159             = 'E'
+TCOMM159             = 'RMS of axes of ellipse fit in Z'
+TUCD159              = 'src.morph.param;em.opt.I'
+TUNIT159             = 'pix'
+TTYPE160             = 'ZELL'
+TUNIT160             = ''
+TFORM160             = 'E'
+TCOMM160             = '1-b/a, where a/b=semi-major/minor axes in Z'
+TUCD160              = 'src.ellipticity;em.opt.I'
+TTYPE161             = 'ZPA'
+TFORM161             = 'E'
+TCOMM161             = 'ellipse fit celestial orientation in Z'
+TUCD161              = 'pos.posAng;em.opt.I'
+TUNIT161             = 'deg'
+TTYPE162             = 'ZERRBITS'
+TUNIT162             = ''
+TFORM162             = 'J'
+TCOMM162             = 'processing warning/error bitwise flags in Z'
+TINDX162             = True
+TUCD162              = 'meta.code;em.opt.I'
+TNULL162             = -99999999
+TTYPE163             = 'ZAVERAGECONF'
+TUNIT163             = ''
+TFORM163             = 'E'
+TCOMM163             = 'average confidence in 2 arcsec diam default aperture 3 Z'
+TUCD163              = 'stat.likelihood;em.opt.I'
+TTYPE164             = 'ZCLASS'
+TUNIT164             = ''
+TFORM164             = 'I'
+TCOMM164             = 'discrete image classification flag in Z'
+TUCD164              = 'src.class;em.opt.I'
+TNULL164             = -9999
+TTYPE165             = 'ZCLASSSTAT'
+TUNIT165             = ''
+TFORM165             = 'E'
+TCOMM165             = 'N(0,1) stellarness-of-profile statistic in Z'
+TUCD165              = 'stat;em.opt.I'
+TTYPE166             = 'ZPPERRBITS'
+TUNIT166             = ''
+TFORM166             = 'J'
+TCOMM166             = 'additional WFAU post-processing error bits in Z'
+TUCD166              = 'meta.code;em.opt.I'
+TNULL166             = 0
+TTYPE167             = 'ZSEQNUM'
+TUNIT167             = ''
+TFORM167             = 'J'
+TCOMM167             = 'the running number of the Z detection'
+TUCD167              = 'meta.id;em.opt.I'
+TNULL167             = -99999999
+TTYPE168             = 'ZXI'
+TFORM168             = 'E'
+TCOMM168             = 'Offset of Z detection from master position (+east/-west)'
+TUCD168              = 'pos.eq.ra;arith.diff;em.opt.I'
+TUNIT168             = 'arcsec'
+TTYPE169             = 'ZETA'
+TFORM169             = 'E'
+TCOMM169             = 'Offset of Z detection from master position (+north/-south)'
+TUCD169              = 'pos.eq.dec;arith.diff;em.opt.I'
+TUNIT169             = 'arcsec'
+TTYPE170             = 'PRIMARY_SOURCE'
+TFORM170             = 'B'
+TCOMM170             = 'Primary source 1; secondary source 0'
+TINDX170             = True
+TUCD170              = 'meta.code'
+TUNIT170             = ''
+EXTNAME              = 'PHASE3CATALOG'
+INHERIT              = True
+CHECKSUM             = 'cVEUeSBRcSBRcSBR'
+DATASUM              = '0'
+
+HDU 2 - PHASE3FILELIST
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 42
+NAXIS2               = 5073
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 1
+TTYPE1               = 'ORIGFILE'
+TFORM1               = '42A'
+EXTNAME              = 'PHASE3FILELIST'
+CHECKSUM             = '8FJMAD9J2DGJ8D9J'
+DATASUM              = '1996340532'
+

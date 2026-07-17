@@ -1,0 +1,249 @@
+# IMAGE.ASSOCIATED header keyword report
+
+**Product format:** IMAGE (single) associated file format
+
+**Archive example:** [ESO header page](https://archive.eso.org/hdr?DpId=ADP.2016-07-29T07:24:33.571)
+
+Mandatory checklists include keywords that are always mandatory, mandatory for ESO files, or mandatory when applicable. The placeholder `i` denotes a numbered series.
+
+## Mandatory keyword checklists
+
+### Primary HDU
+
+- [ ] **PRODCATG**
+- [ ] **ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.)**
+- [ ] **ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.)**
+- [ ] **ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.)**
+- [ ] **ORIGIN**
+- [ ] **TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.)**
+- [ ] **INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.)**
+- [ ] **FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.)**
+- [ ] **OBJECT**
+- [ ] **RA and DEC**
+- [ ] **EQUINOX**
+- [ ] **RADESYS**
+- [ ] **TIMESYS**
+- [ ] **EXPTIME**
+- [ ] **TEXPTIME**
+- [ ] **MJD-OBS**
+- [ ] **MJD-END**
+- [ ] **PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.)**
+- [ ] **OBIDi (for example: OBID1, OBID2, OBID3, etc.)**
+- [ ] **NCOMBINE**
+- [ ] **OBSTECH**
+- [ ] **FLUXCAL**
+- [ ] **PROCSOFT**
+- [ ] **REFERENC**
+- [ ] **PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN**
+- [ ] **BUNIT**
+- [ ] **CRVALi (for example: CRVAL1, CRVAL2, CRVAL3, etc.)**
+- [ ] **CRPIXi (for example: CRPIX1, CRPIX2, CRPIX3, etc.)**
+- [ ] **CTYPEi (for example: CTYPE1, CTYPE2, CTYPE3, etc.)**
+- [ ] **CUNITi (for example: CUNIT1, CUNIT2, CUNIT3, etc.)**
+- [ ] **CDi_j**
+- [ ] **PHOTZP**
+- [ ] **PHOTSYS**
+- [ ] **ABMAGLIM**
+- [ ] **ABMAGSAT**
+- [ ] **PSF_FWHM**
+- [ ] **ELLIPTIC**
+- [ ] **STREHL**
+- [ ] **CHECKSUM**
+- [ ] **DATASUM**
+- [ ] **NDIT**
+- [ ] **NJITTER**
+- [ ] **NOFFSETS**
+- [ ] **NUSTEP**
+- [ ] **NOESODAT**
+
+### Extension HDU
+
+- [ ] **CHECKSUM**
+- [ ] **DATASUM**
+- [ ] **EXTNAME**
+
+## All keyword requirements
+
+### Primary HDU
+
+| Keyword | Requirement | Meaning |
+| --- | --- | --- |
+| **PRODCATG** | `MM` | Keyword mandatory |
+| **ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.)** | `MA31` | Keyword mandatory where applicable [footnote 31] |
+| **ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.)** | `MA32` | Keyword mandatory where applicable [footnote 32] |
+| **ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.)** | `MA31` | Keyword mandatory where applicable [footnote 31] |
+| **ORIGIN** | `MM` | Keyword mandatory |
+| **TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.)** | `MM` | Keyword mandatory |
+| **INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.)** | `MM` | Keyword mandatory |
+| **FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.)** | `MM` | Keyword mandatory |
+| **OBJECT** | `MM` | Keyword mandatory |
+| **RA and DEC** | `MM` | Keyword mandatory |
+| **EQUINOX** | `MA37` | Keyword mandatory where applicable [footnote 37] |
+| **RADESYS** | `MM` | Keyword mandatory |
+| **TIMESYS** | `MA38` | Keyword mandatory where applicable [footnote 38] |
+| **EXPTIME** | `MM` | Keyword mandatory |
+| **TEXPTIME** | `MM` | Keyword mandatory |
+| **MJD-OBS** | `MM` | Keyword mandatory |
+| **MJD-END** | `MM` | Keyword mandatory |
+| **PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.)** | `ME` | Keyword mandatory for ESO files |
+| **OBIDi (for example: OBID1, OBID2, OBID3, etc.)** | `ME` | Keyword mandatory for ESO files |
+| **NCOMBINE** | `ME` | Keyword mandatory for ESO files |
+| **OBSTECH** | `MM` | Keyword mandatory |
+| **FLUXCAL** | `MM` | Keyword mandatory |
+| **PROCSOFT** | `MM` | Keyword mandatory |
+| **REFERENC** | `M40` | Keyword mandatory [footnote 40] |
+| **PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN** | `ME` | Keyword mandatory for ESO files |
+| **BUNIT** | `MM` | Keyword mandatory |
+| GAIN | `OP` | It makes sense to provide the value, but it is optional |
+| DETRON | `OP` | It makes sense to provide the value, but it is optional |
+| EFFRON | `OP` | It makes sense to provide the value, but it is optional |
+| WEIGHT | `OP` | It makes sense to provide the value, but it is optional |
+| **CRVALi (for example: CRVAL1, CRVAL2, CRVAL3, etc.)** | `MM` | Keyword mandatory |
+| **CRPIXi (for example: CRPIX1, CRPIX2, CRPIX3, etc.)** | `MM` | Keyword mandatory |
+| **CTYPEi (for example: CTYPE1, CTYPE2, CTYPE3, etc.)** | `MM` | Keyword mandatory |
+| **CUNITi (for example: CUNIT1, CUNIT2, CUNIT3, etc.)** | `MM` | Keyword mandatory |
+| **CDi_j** | `MM` | Keyword mandatory |
+| CSYERi (for example: CSYER1, CSYER2, CSYER3, etc.) | `RC` | Keyword recommended |
+| CRDERi (for example: CRDER1, CRDER2, CRDER3, etc.) | `RC` | Keyword recommended |
+| **PHOTZP** | `MM` | Keyword mandatory |
+| PHOTZPER | `RC` | Keyword recommended |
+| **PHOTSYS** | `MM` | Keyword mandatory |
+| RA_ERR | `NO` | Keyword not allowed: the Phase 3 system will reject the file |
+| DEC_ERR | `NO` | Keyword not allowed: the Phase 3 system will reject the file |
+| STOKES | `SU` | Contact Phase 3 support to determine whether the keyword is required |
+| **ABMAGLIM** | `MM` | Keyword mandatory |
+| **ABMAGSAT** | `MM` | Keyword mandatory |
+| **PSF_FWHM** | `MM` | Keyword mandatory |
+| **ELLIPTIC** | `M49` | Keyword mandatory [footnote 49] |
+| **STREHL** | `MA51` | Keyword mandatory where applicable [footnote 51] |
+| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| **CHECKSUM** | `MM` | Keyword mandatory |
+| **DATASUM** | `MM` | Keyword mandatory |
+| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| **NDIT** | `MA52` | Keyword mandatory where applicable [footnote 52] |
+| **NJITTER** | `MA52` | Keyword mandatory where applicable [footnote 52] |
+| **NOFFSETS** | `MA52` | Keyword mandatory where applicable [footnote 52] |
+| **NUSTEP** | `MA52` | Keyword mandatory where applicable [footnote 52] |
+| **NOESODAT** | `MA59` | Keyword mandatory where applicable [footnote 59] |
+
+### Extension HDU
+
+| Keyword | Requirement | Meaning |
+| --- | --- | --- |
+| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| **CHECKSUM** | `MM` | Keyword mandatory |
+| **DATASUM** | `MM` | Keyword mandatory |
+| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| **EXTNAME** | `MA65` | Keyword mandatory where applicable [footnote 65] |
+
+## Referenced footnotes
+
+31. Mandatory for the cases where ancillary files are provided in a non-FITS format.
+32. Mandatory for the cases where ancillary files are provided in association with the scientific data.
+37. If RADESYS='FK5', EQUINOX=2000.0 is mandatory. If RADESYS = 'ICRS', EQUINOX is tolerated and its value needs to be 2000.0.
+38. Must be present if the system used is other than UTC.
+40. If a refereed publication is not available at the time of the data release going public, the value can be left to an empty string.
+49. For VIRCAM and OmegaCAM only.
+51. For AO observations only.
+52. NIR image data products qualify for the keyword if, and only if, all exposures and observations contributing to the given product share the same value for the respective parameter. If, for example, the product has been created from exposures taken with different detector integration time, the keyword DIT should not be defined in the FITS header.
+59. Applicable to products originating or containing data from a non-ESO facility.
+65. A specific value is requested in particular cases: 'PHASE3PROVENANCE', 'PHASE3CATALOG', 'PHASE3FILELIST'.
+
+## Example archive FITS headers
+
+Lines prefixed with `*` are mandatory, mandatory for ESO files, or mandatory when applicable.
+
+### HDU 0 — PRIMARY
+
+```text
+  SIMPLE               = True
+  BITPIX               = -32
+  NAXIS                = 2
+  NAXIS1               = 4474
+  NAXIS2               = 4400
+  EXTEND               = True
+  DATE                 = '2016-03-24T09:40:20'
+* ORIGIN               = 'ESO-PARANAL'
+* TELESCOP             = 'ESO-VLT-U4'
+* INSTRUME             = 'HAWKI'
+* OBJECT               = 'NGC6334-field2'
+* RA                   = 260.133731745835
+* DEC                  = -35.7324267288224
+* EXPTIME              = 384.0
+* MJD-OBS              = 56087.30789041
+  DATE-OBS             = '2012-06-09T07:23:21.7311'
+  UTC                  = 26598.0
+  LST                  = 71637.551
+  PI-COI               = 'UNKNOWN'
+  OBSERVER             = 'UNKNOWN'
+  DATAMD5              = 'f08398530f5a8a336bf9687712cb89a7'
+  PIPEFILE             = 'HAWKI.2012-06-09T07:23:21.731_ex_tl.fits'
+* OBSTECH              = 'IMAGE'
+  IMATYPE              = 'TILE'
+  ISAMP                = False
+  SINGLEXP             = False
+* NCOMBINE             = 8
+* FILTER               = 'Ks'
+* TEXPTIME             = 384.0
+* MJD-END              = 56087.3249360156
+* PROG_ID              = '089.C-0852(A)'
+* OBID1                = 745241
+  M_EPOCH              = False
+* REFERENC             = ''
+  DIT                  = 6.0
+* PRODCATG             = 'SCIENCE.IMAGE'
+* ASSON1               = 'HAWKI.2012-06-09T07:23:21.731_ex_tl_conf.fits'
+* FLUXCAL              = 'ABSOLUTE'
+* PROV1                = 'HAWKI.2012-06-09T07:23:21.731.fits'
+* PROV2                = 'HAWKI.2012-06-09T07:33:43.892.fits'
+* PROV3                = 'HAWKI.2012-06-09T07:35:04.333.fits'
+* PROV4                = 'HAWKI.2012-06-09T07:38:09.526.fits'
+* PROV5                = 'HAWKI.2012-06-09T07:39:27.127.fits'
+* PROV6                = 'HAWKI.2012-06-09T07:42:38.957.fits'
+* PROV7                = 'HAWKI.2012-06-09T07:43:59.431.fits'
+* PROV8                = 'HAWKI.2012-06-09T07:47:06.472.fits'
+  EXTNAME              = 'CHIP1.INT1'
+* CTYPE1               = 'RA---TAN'
+* CTYPE2               = 'DEC--TAN'
+* CRVAL1               = 260.131355785409
+* CRVAL2               = -35.7323879370574
+  CD1_1                = -1.89954554708994e-05
+  CD2_1                = -2.27075683989949e-05
+  CD1_2                = -2.26952067172637e-05
+  CD2_2                = 1.89867759567756e-05
+  INHERIT              = True
+  ZQUANTIZ             = 'NONE'
+  READNOIS             = 9.71526
+  GAIN                 = 2.114267
+* BUNIT                = 'ADU'
+* CUNIT1               = 'deg'
+* CUNIT2               = 'deg'
+  CSYER1               = 0.0
+  CSYER2               = 0.0
+  CRDER1               = 0.328539881141986
+  CRDER2               = 0.328539881141986
+* PHOTSYS              = 'VEGA'
+* ABMAGSAT             = 12.7813742438
+* PHOTZP               = 27.42217034474875
+* ABMAGLIM             = 19.1021227927
+* PSF_FWHM             = 0.5788153
+* ELLIPTIC             = 0.08264178
+* CRPIX1               = 2277.79694314352
+* CRPIX2               = 2250.83614502209
+  RADECSYS             = 'ICRS'
+* EQUINOX              = 2000.0
+  PHOTZPER             = 0.160985797643661
+  ZPFUDGED             = False
+  ARCFILE              = 'ADP.2016-07-29T07:24:33.571.fits'
+* ASSON2               = 'HAWKI.2012-06-09T07:23:21.731_ex_tl_var.fits'
+* PROCSOFT             = '1.1.0'
+  NSTACK               = 8
+  CASUEXPT             = 48.0
+* CHECKSUM             = '9peACod89odACod7'
+* DATASUM              = '4245566132'
+  HISTORY              = "= ''NONE    '           / Lossless compression without quantization' /"
+  ORIGFILE             = 'HAWKI.2012-06-09T07:23:21.731_ex_tl.fits'
+  P3ORIG               = 'IDP'
+```

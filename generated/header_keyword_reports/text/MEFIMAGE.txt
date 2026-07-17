@@ -1,0 +1,1611 @@
+
+------------------------------------------------------------
+ESO Phase 3 header keyword guide
+Requested data product type: MEFIMAGE
+Product format: MEFIMAGE (mosaic) MEF format
+------------------------------------------------------------
+
+Checklist note: this includes keywords that are always mandatory, mandatory for ESO files, or mandatory when applicable.
+The placeholder "i" means a numbered series; include the numbered keywords needed for your data.
+
+------------------------------
+MEFIMAGE - Primary HDU mandatory keyword checklist
+------------------------------
+PRODCATG
+ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.)
+ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.)
+ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.)
+ORIGIN
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.)
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.)
+FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.)
+OBJECT
+RA and DEC
+EQUINOX
+RADESYS
+TIMESYS
+EXPTIME
+TEXPTIME
+MJD-OBS
+MJD-END
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.)
+OBIDi (for example: OBID1, OBID2, OBID3, etc.)
+NCOMBINE
+OBSTECH
+FLUXCAL
+PROCSOFT
+REFERENC
+PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN
+STREHL
+CHECKSUM
+DATASUM
+NDIT
+NJITTER
+NOFFSETS
+NUSTEP
+NOESODAT
+
+------------------------------
+MEFIMAGE - Extension HDU mandatory keyword checklist
+------------------------------
+BUNIT
+CRVALi (for example: CRVAL1, CRVAL2, CRVAL3, etc.)
+CRPIXi (for example: CRPIX1, CRPIX2, CRPIX3, etc.)
+CTYPEi (for example: CTYPE1, CTYPE2, CTYPE3, etc.)
+CUNITi (for example: CUNIT1, CUNIT2, CUNIT3, etc.)
+CDi_j
+PHOTZP
+PHOTSYS
+ABMAGLIM
+ABMAGSAT
+PSF_FWHM
+ELLIPTIC
+CHECKSUM
+DATASUM
+EXTNAME
+
+------------------------------
+MEFIMAGE - Primary HDU
+------------------------------
+PRODCATG: Keyword mandatory
+ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.): Keyword mandatory where applicable [footnote 31]
+ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.): Keyword mandatory where applicable [footnote 32]
+ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.): Keyword mandatory where applicable [footnote 31]
+ORIGIN: Keyword mandatory
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.): Keyword mandatory
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.): Keyword mandatory
+FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.): Keyword mandatory
+OBJECT: Keyword mandatory
+RA and DEC: Keyword mandatory
+EQUINOX: Keyword mandatory where applicable [footnote 37]
+RADESYS: Keyword mandatory
+TIMESYS: Keyword mandatory where applicable [footnote 38]
+EXPTIME: Keyword mandatory
+TEXPTIME: Keyword mandatory
+MJD-OBS: Keyword mandatory
+MJD-END: Keyword mandatory
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.): Keyword mandatory for ESO files
+OBIDi (for example: OBID1, OBID2, OBID3, etc.): Keyword mandatory for ESO files
+NCOMBINE: Keyword mandatory for ESO files
+OBSTECH: Keyword mandatory
+FLUXCAL: Keyword mandatory
+PROCSOFT: Keyword mandatory
+REFERENC: Keyword mandatory [footnote 40]
+PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN: Keyword mandatory for ESO files
+GAIN: It makes sense to provide the value, but it is optional
+DETRON: It makes sense to provide the value, but it is optional
+EFFRON: It makes sense to provide the value, but it is optional
+WEIGHT: It makes sense to provide the value, but it is optional
+RA_ERR: Keyword not allowed: the Phase 3 system will reject the file
+DEC_ERR: Keyword not allowed: the Phase 3 system will reject the file
+STOKES: Contact Phase 3 support to determine whether the keyword is required
+STREHL: Keyword mandatory where applicable [footnote 51]
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+NDIT: Keyword mandatory where applicable [footnote 52]
+NJITTER: Keyword mandatory where applicable [footnote 52]
+NOFFSETS: Keyword mandatory where applicable [footnote 52]
+NUSTEP: Keyword mandatory where applicable [footnote 52]
+NOESODAT: Keyword mandatory where applicable [footnote 59]
+
+------------------------------
+MEFIMAGE - Extension HDU
+------------------------------
+BUNIT: Keyword mandatory
+CRVALi (for example: CRVAL1, CRVAL2, CRVAL3, etc.): Keyword mandatory
+CRPIXi (for example: CRPIX1, CRPIX2, CRPIX3, etc.): Keyword mandatory
+CTYPEi (for example: CTYPE1, CTYPE2, CTYPE3, etc.): Keyword mandatory
+CUNITi (for example: CUNIT1, CUNIT2, CUNIT3, etc.): Keyword mandatory
+CDi_j: Keyword mandatory
+CSYERi (for example: CSYER1, CSYER2, CSYER3, etc.): Keyword recommended
+CRDERi (for example: CRDER1, CRDER2, CRDER3, etc.): Keyword recommended
+PHOTZP: Keyword mandatory
+PHOTZPER: Keyword recommended
+PHOTSYS: Keyword mandatory
+ABMAGLIM: Keyword mandatory
+ABMAGSAT: Keyword mandatory
+PSF_FWHM: Keyword mandatory
+ELLIPTIC: Keyword mandatory [footnote 49]
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+EXTNAME: Keyword mandatory where applicable [footnote 65]
+
+------------------------------
+MEFIMAGE - Referenced footnotes
+------------------------------
+31: Mandatory for the cases where ancillary files are provided in a non-FITS format.
+32: Mandatory for the cases where ancillary files are provided in association with the scientific data.
+37: If RADESYS='FK5', EQUINOX=2000.0 is mandatory. If RADESYS = 'ICRS', EQUINOX is tolerated and its value needs to be 2000.0.
+38: Must be present if the system used is other than UTC.
+40: If a refereed publication is not available at the time of the data release going public, the value can be left to an empty string.
+49: For VIRCAM and OmegaCAM only.
+51: For AO observations only.
+52: NIR image data products qualify for the keyword if, and only if, all exposures and observations contributing to the given product share the same value for the respective parameter. If, for example, the product has been created from exposures taken with different detector integration time, the keyword DIT should not be defined in the FITS header.
+59: Applicable to products originating or containing data from a non-ESO facility.
+65: A specific value is requested in particular cases: 'PHASE3PROVENANCE', 'PHASE3CATALOG', 'PHASE3FILELIST'.
+
+------------------------------
+MEFIMAGE - Example archive FITS headers
+Source: https://archive.eso.org/hdr?DpId=ADP.2025-12-09T09:08:02.822
+------------------------------
+HDU 0 - PRIMARY
+SIMPLE               = True
+BITPIX               = 8
+NAXIS                = 0
+EXTEND               = True
+ORIGIN               = 'ESO-PARANAL'
+DATE                 = '2023-01-28T01:46:25'
+TELESCOP             = 'ESO-VISTA'
+INSTRUME             = 'VIRCAM'
+OBJECT               = 'No name'
+RA                   = 14.03687747157925
+DEC                  = -72.0117365818111
+EQUINOX              = 2000.0
+RADECSYS             = 'ICRS'
+EXPTIME              = 375.0
+MJD-OBS              = 59972.07391586
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+UTC                  = 6385.023
+LST                  = 19987.414
+PI-COI               = 'UNKNOWN'
+OBSERVER             = 'UNKNOWN'
+ORIGFILE             = 'v20230127_00089_st.fits.fz'
+JITTER_I             = 1
+JITTER_X             = 0.0
+JITTER_Y             = 0.0
+JITTRNUM             = 21
+JITTR_ID             = 'Jitter5n'
+NJITTER              = 5
+NOFFSETS             = 6
+NUSTEP               = 1
+OBSNUM               = 21
+OFFSET_I             = 5
+OFFSET_X             = 329.779
+OFFSET_Y             = 0.0
+OFFSTNUM             = 1
+OFFST_ID             = 'Tile6n'
+RECIPE               = 'DEFAULT'
+REQTIME              = 5.0
+USTEPNUM             = 21
+USTEP_I              = 1
+USTEP_ID             = 'Single'
+USTEP_X              = 0.0
+USTEP_Y              = 0.0
+ARCFILE              = 'ADP.2025-12-09T09:08:02.822.fits.fz'
+ESOGRADE             = 'C'
+OBSTATUS             = 'Executed'
+PREVIEWV             = '$Id: preview,v 1.40 2012/09/04 11:33:18 jim Exp $'
+SOFTVERS             = '$Revision: 1.208 $'
+SOFTDATE             = '$Date: 2017/04/25 11:03:15 $'
+SOFTAUTH             = 'Jim Lewis <jrl@ast.cam.ac.uk>'
+SOFTINST             = 'CASU: http://casu.ast.cam.ac.uk'
+VSA_TIME             = ''
+VSA_MFID             = 0
+CASUVERS             = 'vircam version 1.5'
+PRODCATG             = 'SCIENCE.MEFIMAGE'
+NOESODAT             = False
+TIMESYS              = 'UTC'
+FLUXCAL              = 'ABSOLUTE'
+FILTER               = 'Ks'
+DIT                  = 5.0
+OBSTECH              = 'IMAGE,JITTER'
+PROCSOFT             = 'vircam version 1.5'
+NDIT                 = 15
+PROG_ID              = '109.230A.001'
+OBID1                = 3227284
+NCOMBINE             = 5
+MJD-END              = 59972.08025340555
+TEXPTIME             = 375.0
+REFERENC             = '2011A&A...527A.116C'
+ASSON1               = 'v20230127_00089_st_conf.fits.fz'
+PROV1                = 'VCAM.2023-01-28T01:46:26.330.fits'
+PROV2                = 'VCAM.2023-01-28T01:48:24.061.fits'
+PROV3                = 'VCAM.2023-01-28T01:50:23.497.fits'
+PROV4                = 'VCAM.2023-01-28T01:52:17.551.fits'
+PROV5                = 'VCAM.2023-01-28T01:54:18.894.fits'
+CHECKSUM             = 'eOWVfNUSeNUSeNUS'
+DATASUM              = '0'
+P3ORIG               = 'EDP'
+
+HDU 1 - DET1.CHIP1
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2100
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP1'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:12.1167'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391586
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 5420.948
+CRPIX2               = 6865.128
+CRVAL1               = 14.0339589241402
+CRVAL2               = -72.0120167522845
+CD1_1                = 6.08973670930222e-07
+CD2_1                = -9.48288697074454e-05
+CD1_2                = 9.48704516585311e-05
+CD2_2                = 6.57714500841368e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[1]'
+FLATCOR              = 'Ks_flat_20230115.fit[1]'
+GAINCOR              = 1.144929
+LINCOR               = 'chan_comb_20230121.fit[1]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[1]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[1]'
+DESTRIPE             = True
+STRPRMS              = 6.49668
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 9043.66
+SKYNOISE             = 6.96
+ELLIPTIC             = 0.03845584
+NUMBRMS              = 135
+STDCRMS              = 0.05550435
+WCSPASS              = 2
+RAZP01               = -16.76696
+DECZP01              = -2.132402
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 3.09556
+NUMSTDS              = 193
+RAZP12               = 0.002569859
+DECZP12              = -0.006670367
+MAGZPT               = 23.019
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 1.0524904
+ABMAGLIM             = 20.52479192330677
+ABMAGSAT             = 12.52479192330677
+VETOAB               = 1.839
+PHOTZP               = 24.71612501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.0392475009473788
+CRDER1               = 0.0392475009473788
+CSYER2               = 0.0392475009473788
+CRDER2               = 0.0392475009473788
+CHECKSUM             = 'Uc3Zaa3XVa3Xaa3X'
+DATASUM              = '1062070840'
+
+HDU 2 - DET1.CHIP2
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP2'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:12.3123'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391588
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 2501.111
+CRPIX2               = 6868.485
+CRVAL1               = 14.0339712218115
+CRVAL2               = -72.0121371539716
+CD1_1                = 5.75746824938308e-07
+CD2_1                = -9.48179198365317e-05
+CD1_2                = 9.48750440486287e-05
+CD2_2                = 6.25739043057391e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[2]'
+FLATCOR              = 'Ks_flat_20230115.fit[2]'
+GAINCOR              = 0.7556577
+LINCOR               = 'chan_comb_20230121.fit[2]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[2]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[2]'
+DESTRIPE             = True
+STRPRMS              = 6.49668
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8855.63
+SKYNOISE             = 7.71
+ELLIPTIC             = 0.05064893
+NUMBRMS              = 196
+STDCRMS              = 0.05471794
+WCSPASS              = 2
+RAZP01               = -16.84942
+DECZP01              = -2.708645
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.874821
+NUMSTDS              = 297
+RAZP12               = 0.01766987
+DECZP12              = -0.0067818
+MAGZPT               = 22.989
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.97743914
+ABMAGLIM             = 20.41905087720578
+ABMAGSAT             = 12.41905087720578
+VETOAB               = 1.839
+PHOTZP               = 24.68612501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.0386914259648382
+CRDER1               = 0.0386914259648382
+CSYER2               = 0.0386914259648382
+CRDER2               = 0.0386914259648382
+CHECKSUM             = 'KgVcNeUZKeUaKeUY'
+DATASUM              = '667607414'
+
+HDU 3 - DET1.CHIP3
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP3'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:12.5098'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.0739159
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -420.0509
+CRPIX2               = 6868.76
+CRVAL1               = 14.0351618321554
+CRVAL2               = -72.0120045383308
+CD1_1                = 5.51426283743179e-07
+CD2_1                = -9.48322836104008e-05
+CD1_2                = 9.49057917565884e-05
+CD2_2                = 5.67898377543444e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[3]'
+FLATCOR              = 'Ks_flat_20230115.fit[3]'
+GAINCOR              = 0.7963995
+LINCOR               = 'chan_comb_20230121.fit[3]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[3]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[3]'
+DESTRIPE             = True
+STRPRMS              = 6.49668
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8853.48
+SKYNOISE             = 8.24
+ELLIPTIC             = 0.06018126
+NUMBRMS              = 350
+STDCRMS              = 0.07381858
+WCSPASS              = 2
+RAZP01               = -12.65775
+DECZP01              = -2.219595
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.993919
+NUMSTDS              = 438
+RAZP12               = 0.002763191
+DECZP12              = 0.002276658
+MAGZPT               = 23.006
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 1.01793246
+ABMAGLIM             = 20.34645089309038
+ABMAGSAT             = 12.34645089309038
+VETOAB               = 1.839
+PHOTZP               = 24.70312501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.05219761801199903
+CRDER1               = 0.05219761801199903
+CSYER2               = 0.05219761801199903
+CRDER2               = 0.05219761801199903
+CHECKSUM             = 'g4PVi3PVg3PVg3PV'
+DATASUM              = '3789155076'
+
+HDU 4 - DET1.CHIP4
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP4'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:12.7085'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391592
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -3333.763
+CRPIX2               = 6871.317
+CRVAL1               = 14.0356089735693
+CRVAL2               = -72.0124161366039
+CD1_1                = 5.74648072540487e-07
+CD2_1                = -9.48581700461178e-05
+CD1_2                = 9.49071586341341e-05
+CD2_2                = 6.04936275308004e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[4]'
+FLATCOR              = 'Ks_flat_20230115.fit[4]'
+GAINCOR              = 0.9930388
+LINCOR               = 'chan_comb_20230121.fit[4]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[4]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[4]'
+DESTRIPE             = True
+STRPRMS              = 6.49668
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8694.36
+SKYNOISE             = 8.28
+ELLIPTIC             = 0.06332618
+NUMBRMS              = 530
+STDCRMS              = 0.07716877
+WCSPASS              = 2
+RAZP01               = -11.25089
+DECZP01              = -3.698319
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 3.149026
+NUMSTDS              = 656
+RAZP12               = 0.001017478
+DECZP12              = 0.0007232946
+MAGZPT               = 22.982
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 1.07066884
+ABMAGLIM             = 20.29408748037098
+ABMAGSAT             = 12.29408748037098
+VETOAB               = 1.839
+PHOTZP               = 24.67912501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.05456656065789481
+CRDER1               = 0.05456656065789481
+CSYER2               = 0.05456656065789481
+CRDER2               = 0.05456656065789481
+CHECKSUM             = '9jAhAh9g3hAg9h7g'
+DATASUM              = '589471918'
+
+HDU 5 - DET1.CHIP5
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP5'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:13.1162'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391594
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 5412.859
+CRPIX2               = 2978.719
+CRVAL1               = 14.0354833486451
+CRVAL2               = -72.0116519337757
+CD1_1                = 5.72252245372081e-07
+CD2_1                = -9.48250575951685e-05
+CD1_2                = 9.48754830369453e-05
+CD2_2                = 5.9205673083401e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[5]'
+FLATCOR              = 'Ks_flat_20230115.fit[5]'
+GAINCOR              = 1.027185
+LINCOR               = 'chan_comb_20230121.fit[5]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[5]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[5]'
+DESTRIPE             = True
+STRPRMS              = 8.668262
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8947.43
+SKYNOISE             = 8.84
+ELLIPTIC             = 0.0395276
+NUMBRMS              = 186
+STDCRMS              = 0.05693829
+WCSPASS              = 2
+RAZP01               = -11.58872
+DECZP01              = -0.9864957
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.767514
+NUMSTDS              = 250
+RAZP12               = 0.001338233
+DECZP12              = -0.00122067
+MAGZPT               = 22.998
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.94095476
+ABMAGLIM             = 20.29711045980049
+ABMAGSAT             = 12.29711045980049
+VETOAB               = 1.839
+PHOTZP               = 24.69512501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.0402614513896077
+CRDER1               = 0.0402614513896077
+CSYER2               = 0.0402614513896077
+CRDER2               = 0.0402614513896077
+CHECKSUM             = 'hGWFjEV9hEVChEV9'
+DATASUM              = '2561954555'
+
+HDU 6 - DET1.CHIP6
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP6'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:13.3384'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391596
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 2495.074
+CRPIX2               = 2980.572
+CRVAL1               = 14.0358995856742
+CRVAL2               = -72.0117831530302
+CD1_1                = 5.74049034728395e-07
+CD2_1                = -9.48355713388908e-05
+CD1_2                = 9.48805766096427e-05
+CD2_2                = 5.98119074827976e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[6]'
+FLATCOR              = 'Ks_flat_20230115.fit[6]'
+GAINCOR              = 1.095238
+LINCOR               = 'chan_comb_20230121.fit[6]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[6]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[6]'
+DESTRIPE             = True
+STRPRMS              = 8.668262
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8894.54
+SKYNOISE             = 7.11
+ELLIPTIC             = 0.05723155
+NUMBRMS              = 299
+STDCRMS              = 0.04876659
+WCSPASS              = 2
+RAZP01               = -10.00537
+DECZP01              = -1.4804
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.752283
+NUMSTDS              = 399
+RAZP12               = -8.216675e-05
+DECZP12              = 0.003876011
+MAGZPT               = 23.013
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.93577622
+ABMAGLIM             = 20.54517582050876
+ABMAGSAT             = 12.54517582050876
+VETOAB               = 1.839
+PHOTZP               = 24.71012501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.03448318431321492
+CRDER1               = 0.03448318431321492
+CSYER2               = 0.03448318431321492
+CRDER2               = 0.03448318431321492
+CHECKSUM             = '66Kc96Jc66Jc66Jc'
+DATASUM              = '3353196996'
+
+HDU 7 - DET1.CHIP7
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP7'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:13.5488'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391598
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -422.6426
+CRPIX2               = 2982.905
+CRVAL1               = 14.0365515044768
+CRVAL2               = -72.0119998441348
+CD1_1                = 5.68250854268913e-07
+CD2_1                = -9.48364571142825e-05
+CD1_2                = 9.48680642661792e-05
+CD2_2                = 5.80255666904901e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[7]'
+FLATCOR              = 'Ks_flat_20230115.fit[7]'
+GAINCOR              = 1.17798
+LINCOR               = 'chan_comb_20230121.fit[7]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[7]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[7]'
+DESTRIPE             = True
+STRPRMS              = 8.668262
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8789.43
+SKYNOISE             = 6.56
+ELLIPTIC             = 0.04776514
+NUMBRMS              = 498
+STDCRMS              = 0.06233061
+WCSPASS              = 2
+RAZP01               = -7.701384
+DECZP01              = -2.23748
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.878039
+NUMSTDS              = 615
+RAZP12               = 0.002185335
+DECZP12              = 0.002671542
+MAGZPT               = 22.998
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.97853326
+ABMAGLIM             = 20.59947712389403
+ABMAGSAT             = 12.59947712389403
+VETOAB               = 1.839
+PHOTZP               = 24.69512501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.04407439511486926
+CRDER1               = 0.04407439511486926
+CSYER2               = 0.04407439511486926
+CRDER2               = 0.04407439511486926
+CHECKSUM             = 'aefAabc8abcAabc7'
+DATASUM              = '713381906'
+
+HDU 8 - DET1.CHIP8
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP8'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:13.7496'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.073916
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -3339.415
+CRPIX2               = 2985.292
+CRVAL1               = 14.0370973321069
+CRVAL2               = -72.0121102440398
+CD1_1                = 5.87246378164132e-07
+CD2_1                = -9.48378463587693e-05
+CD1_2                = 9.48922067646703e-05
+CD2_2                = 5.85317091167384e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[8]'
+FLATCOR              = 'Ks_flat_20230115.fit[8]'
+GAINCOR              = 0.9708921
+LINCOR               = 'chan_comb_20230121.fit[8]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[8]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[8]'
+DESTRIPE             = True
+STRPRMS              = 8.668262
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8803.65
+SKYNOISE             = 8.96
+ELLIPTIC             = 0.05744767
+NUMBRMS              = 781
+STDCRMS              = 0.0566581
+WCSPASS              = 2
+RAZP01               = -5.765323
+DECZP01              = -2.596035
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.915743
+NUMSTDS              = 956
+RAZP12               = -0.003232765
+DECZP12              = 0.001958841
+MAGZPT               = 22.997
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.99135262
+ABMAGLIM             = 20.25513159817786
+ABMAGSAT             = 12.25513159817786
+VETOAB               = 1.839
+PHOTZP               = 24.69412501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.04006332959147012
+CRDER1               = 0.04006332959147012
+CSYER2               = 0.04006332959147012
+CRDER2               = 0.04006332959147012
+CHECKSUM             = '5QXOANUM7NUMANUM'
+DATASUM              = '1808072116'
+
+HDU 9 - DET1.CHIP9
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP9'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:14.1052'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391602
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 5408.82
+CRPIX2               = -909.4813
+CRVAL1               = 14.0365179960921
+CRVAL2               = -72.0112969393361
+CD1_1                = 5.71939851937391e-07
+CD2_1                = -9.48331727114083e-05
+CD1_2                = 9.48924644265194e-05
+CD2_2                = 5.91270000795157e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[9]'
+FLATCOR              = 'Ks_flat_20230115.fit[9]'
+GAINCOR              = 0.9806792
+LINCOR               = 'chan_comb_20230121.fit[9]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[9]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[9]'
+DESTRIPE             = True
+STRPRMS              = 1.568164
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8868.93
+SKYNOISE             = 6.85
+ELLIPTIC             = 0.05344361
+NUMBRMS              = 212
+STDCRMS              = 0.05032369
+WCSPASS              = 2
+RAZP01               = -7.643587
+DECZP01              = 0.2425118
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.778955
+NUMSTDS              = 289
+RAZP12               = 0.005892117
+DECZP12              = -0.002974129
+MAGZPT               = 22.993
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.9448447
+ABMAGLIM             = 20.56539549360211
+ABMAGSAT             = 12.56539549360211
+VETOAB               = 1.839
+PHOTZP               = 24.69012501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.03558422594953548
+CRDER1               = 0.03558422594953548
+CSYER2               = 0.03558422594953548
+CRDER2               = 0.03558422594953548
+CHECKSUM             = '9kSLIiSL9iSLGiSL'
+DATASUM              = '634001819'
+
+HDU 10 - DET1.CHIP10
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP10'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:14.3018'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391604
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 2493.572
+CRPIX2               = -905.6296
+CRVAL1               = 14.0374946336945
+CRVAL2               = -72.0116539197842
+CD1_1                = 4.69580193353363e-07
+CD2_1                = -9.48440718225661e-05
+CD1_2                = 9.48840698089608e-05
+CD2_2                = 4.77954706879983e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[10]'
+FLATCOR              = 'Ks_flat_20230115.fit[10]'
+GAINCOR              = 1.147924
+LINCOR               = 'chan_comb_20230121.fit[10]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[10]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[10]'
+DESTRIPE             = True
+STRPRMS              = 1.568164
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8936.26
+SKYNOISE             = 7.51
+ELLIPTIC             = 0.07937956
+NUMBRMS              = 365
+STDCRMS              = 0.06382022
+WCSPASS              = 2
+RAZP01               = -4.218817
+DECZP01              = -1.026474
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.835015
+NUMSTDS              = 456
+RAZP12               = -0.002841557
+DECZP12              = 0.001310759
+MAGZPT               = 23.029
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.9639051000000001
+ABMAGLIM             = 20.50514127982276
+ABMAGSAT             = 12.50514127982276
+VETOAB               = 1.839
+PHOTZP               = 24.72612501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.04512771071360732
+CRDER1               = 0.04512771071360732
+CSYER2               = 0.04512771071360732
+CRDER2               = 0.04512771071360732
+CHECKSUM             = 'UZDTXZARUZARUZAR'
+DATASUM              = '2388830950'
+
+HDU 11 - DET1.CHIP11
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2098
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP11'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:14.4980'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391606
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -426.7225
+CRPIX2               = -904.6588
+CRVAL1               = 14.0376909036358
+CRVAL2               = -72.0116854430799
+CD1_1                = 5.86178422622641e-07
+CD2_1                = -9.48316937006471e-05
+CD1_2                = 9.4886182982093e-05
+CD2_2                = 6.05298626626066e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[11]'
+FLATCOR              = 'Ks_flat_20230115.fit[11]'
+GAINCOR              = 0.9709376
+LINCOR               = 'chan_comb_20230121.fit[11]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[11]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[11]'
+DESTRIPE             = True
+STRPRMS              = 1.568164
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8793.33
+SKYNOISE             = 8.66
+ELLIPTIC             = 0.04038417
+NUMBRMS              = 608
+STDCRMS              = 0.04995286
+WCSPASS              = 2
+RAZP01               = -3.623895
+DECZP01              = -1.164079
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.874485
+NUMSTDS              = 794
+RAZP12               = 0.008158835
+DECZP12              = -0.001339242
+MAGZPT               = 22.995
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.9773249
+ABMAGLIM             = 20.30968289228981
+ABMAGSAT             = 12.30968289228981
+VETOAB               = 1.839
+PHOTZP               = 24.69212501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.03532200406316888
+CRDER1               = 0.03532200406316888
+CSYER2               = 0.03532200406316888
+CRDER2               = 0.03532200406316888
+CHECKSUM             = 'gOFYhN9WgNCWgN9W'
+DATASUM              = '3042745771'
+
+HDU 12 - DET1.CHIP12
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP12'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:14.6939'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391608
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -3343.446
+CRPIX2               = -902.8427
+CRVAL1               = 14.0387033497698
+CRVAL2               = -72.01183411597
+CD1_1                = 5.65827546937758e-07
+CD2_1                = -9.48314052726675e-05
+CD1_2                = 9.48834166379834e-05
+CD2_2                = 6.00098344509066e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[12]'
+FLATCOR              = 'Ks_flat_20230115.fit[12]'
+GAINCOR              = 1.164349
+LINCOR               = 'chan_comb_20230121.fit[12]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[12]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[12]'
+DESTRIPE             = True
+STRPRMS              = 1.568164
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8884.22
+SKYNOISE             = 8.16
+ELLIPTIC             = 0.05052596
+NUMBRMS              = 709
+STDCRMS              = 0.06054044
+WCSPASS              = 2
+RAZP01               = 0.0225103
+DECZP01              = -1.652943
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.880933
+NUMSTDS              = 916
+RAZP12               = 0.007948329
+DECZP12              = 0.005147706
+MAGZPT               = 23.005
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.9795172200000002
+ABMAGLIM             = 20.38149902544852
+ABMAGSAT             = 12.38149902544852
+VETOAB               = 1.839
+PHOTZP               = 24.70212501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.04280855403251509
+CRDER1               = 0.04280855403251509
+CSYER2               = 0.04280855403251509
+CRDER2               = 0.04280855403251509
+CHECKSUM             = '0P2L2O0L0O0L0O0L'
+DATASUM              = '2794699383'
+
+HDU 13 - DET1.CHIP13
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP13'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:15.0490'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.0739161
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 5416.641
+CRPIX2               = -4789.368
+CRVAL1               = 14.0384027634981
+CRVAL2               = -72.0113192878926
+CD1_1                = 4.04997611724751e-07
+CD2_1                = -9.48228408203774e-05
+CD1_2                = 9.4901347328186e-05
+CD2_2                = 4.19049274127398e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[13]'
+FLATCOR              = 'Ks_flat_20230115.fit[13]'
+GAINCOR              = 0.7605405
+LINCOR               = 'chan_comb_20230121.fit[13]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[13]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[13]'
+DESTRIPE             = True
+STRPRMS              = 2.021992
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8879.72
+SKYNOISE             = 7.37
+ELLIPTIC             = 0.05080342
+NUMBRMS              = 211
+STDCRMS              = 0.05506044
+WCSPASS              = 2
+RAZP01               = -0.4285667
+DECZP01              = 0.1807236
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.992194
+NUMSTDS              = 291
+RAZP12               = -0.004325282
+DECZP12              = -0.001597826
+MAGZPT               = 23.004
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 1.01734596
+ABMAGLIM             = 20.45827690268555
+ABMAGSAT             = 12.45827690268555
+VETOAB               = 1.839
+PHOTZP               = 24.70112501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.03893361229309393
+CRDER1               = 0.03893361229309393
+CSYER2               = 0.03893361229309393
+CRDER2               = 0.03893361229309393
+CHECKSUM             = '22qF40o920oE20o9'
+DATASUM              = '934478192'
+
+HDU 14 - DET1.CHIP14
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP14'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:15.2473'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391612
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = 2486.272
+CRPIX2               = -4795.585
+CRVAL1               = 14.0383564116293
+CRVAL2               = -72.0111116470655
+CD1_1                = 6.11794017160562e-07
+CD2_1                = -9.48313189236564e-05
+CD1_2                = 9.48915976259196e-05
+CD2_2                = 6.1692516272764e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[14]'
+FLATCOR              = 'Ks_flat_20230115.fit[14]'
+GAINCOR              = 1.029919
+LINCOR               = 'chan_comb_20230121.fit[14]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[14]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[14]'
+DESTRIPE             = True
+STRPRMS              = 2.021992
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8847.64
+SKYNOISE             = 7.25
+ELLIPTIC             = 0.09225202
+NUMBRMS              = 345
+STDCRMS              = 0.05634181
+WCSPASS              = 2
+RAZP01               = -0.9799989
+DECZP01              = 0.9264014
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.93498
+NUMSTDS              = 432
+RAZP12               = -0.004914813
+DECZP12              = -0.001177997
+MAGZPT               = 23.009
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.9978932
+ABMAGLIM             = 20.51031550590569
+ABMAGSAT             = 12.51031550590569
+VETOAB               = 1.839
+PHOTZP               = 24.70612501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.03983967733984707
+CRDER1               = 0.03983967733984707
+CSYER2               = 0.03983967733984707
+CRDER2               = 0.03983967733984707
+CHECKSUM             = 'ci2reg2ocg2ocg2o'
+DATASUM              = '1251950513'
+
+HDU 15 - DET1.CHIP15
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP15'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:15.4460'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391614
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -430.1137
+CRPIX2               = -4793.054
+CRVAL1               = 14.0392207457374
+CRVAL2               = -72.0113211307625
+CD1_1                = 5.77690744063145e-07
+CD2_1                = -9.48345536462598e-05
+CD1_2                = 9.48848480387918e-05
+CD2_2                = 5.97718416553371e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[15]'
+FLATCOR              = 'Ks_flat_20230115.fit[15]'
+GAINCOR              = 1.126743
+LINCOR               = 'chan_comb_20230121.fit[15]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[15]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[15]'
+DESTRIPE             = True
+STRPRMS              = 2.021992
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8750.55
+SKYNOISE             = 7.64
+ELLIPTIC             = 0.1080617
+NUMBRMS              = 511
+STDCRMS              = 0.06945389
+WCSPASS              = 2
+RAZP01               = 2.117997
+DECZP01              = 0.08859891
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.885593
+NUMSTDS              = 705
+RAZP12               = 9.036356e-06
+DECZP12              = -0.00117599
+MAGZPT               = 22.991
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.9811016200000001
+ABMAGLIM             = 20.43516292589395
+ABMAGSAT             = 12.43516292589395
+VETOAB               = 1.839
+PHOTZP               = 24.68812501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.04911131493102363
+CRDER1               = 0.04911131493102363
+CSYER2               = 0.04911131493102363
+CRDER2               = 0.04911131493102363
+CHECKSUM             = '9Vi2ASZ04Sf09SZ0'
+DATASUM              = '2497720927'
+
+HDU 16 - DET1.CHIP16
+XTENSION             = 'IMAGE'
+BITPIX               = 32
+NAXIS                = 2
+NAXIS1               = 2099
+NAXIS2               = 2099
+PCOUNT               = 0
+GCOUNT               = 1
+EXTNAME              = 'DET1.CHIP16'
+ORIGIN               = 'ESO'
+DATE                 = '2023-01-28T01:48:15.6436'
+EXPTIME              = 5.0
+MJD-OBS              = 59972.07391616
+DATE-OBS             = '2023-01-28T01:46:26.3306'
+CTYPE1               = 'RA---ZPN'
+CTYPE2               = 'DEC--ZPN'
+CRPIX1               = -3343.117
+CRPIX2               = -4793.115
+CRVAL1               = 14.0399200186315
+CRVAL2               = -72.0114430689154
+CD1_1                = 5.17039338291631e-07
+CD2_1                = -9.48332256516176e-05
+CD1_2                = 9.489249204851e-05
+CD2_2                = 5.26034648680005e-07
+PV2_1                = 1.0
+PV2_2                = 0.0
+PV2_3                = 44.0
+PV2_4                = 0.0
+PV2_5                = -10300.0
+DARKCOR              = 'dark_20230127_5_15.fit[16]'
+FLATCOR              = 'Ks_flat_20230115.fit[16]'
+GAINCOR              = 0.8575867
+LINCOR               = 'chan_comb_20230121.fit[16]'
+CIR_CPM              = 'v20230127_00089_st_conf.fit[16]'
+NDITCOR              = True
+CIR_VERS             = '$Revision: 1.208 $'
+SKYSUB               = 'Done with sky_20230127_69_Ks.fit[16]'
+DESTRIPE             = True
+STRPRMS              = 2.021992
+RADECSYS             = 'ICRS'
+SKYLEVEL             = 8846.23
+SKYNOISE             = 9.18
+ELLIPTIC             = 0.100696
+NUMBRMS              = 508
+STDCRMS              = 0.0579062
+WCSPASS              = 2
+RAZP01               = 4.616655
+DECZP01              = -0.2924303
+DRIBBLE              = 'bilinear'
+NICOMB               = 5
+SEEING               = 2.923304
+NUMSTDS              = 698
+RAZP12               = -0.0002938152
+DECZP12              = 0.001620527
+MAGZPT               = 23.023
+MAGZRR               = 0.015
+EXTINCT              = 0.05
+HISTORY              = "= '$Id: cir_platesol.c,v 1.15 2011/05/31 09:20:51 jim Exp $' /"
+PERCORR              = 0.0
+BSCALE               = 0.02981424
+NUMZPT               = 3555
+NIGHTZPT             = 23.001
+NIGHTZRR             = 0.01
+NIGHTNUM             = 7
+PROJP1               = 1.0
+PROJP3               = 44.0
+PROJP5               = -10300.0
+FLUXCAL              = 'ABSOLUTE'
+BUNIT                = 'ADU'
+CUNIT2               = 'deg'
+CUNIT1               = 'deg'
+INHERIT              = True
+PHOTSYS              = 'Vega'
+PSF_FWHM             = 0.99392336
+ABMAGLIM             = 20.25587061933007
+ABMAGSAT             = 12.25587061933007
+VETOAB               = 1.839
+PHOTZP               = 24.72012501084005
+PHOTZPER             = 0.015
+CSYER1               = 0.04094586616004203
+CRDER1               = 0.04094586616004203
+CSYER2               = 0.04094586616004203
+CRDER2               = 0.04094586616004203
+CHECKSUM             = 'g2QVh0OVg0OVg0OV'
+DATASUM              = '942050970'
+

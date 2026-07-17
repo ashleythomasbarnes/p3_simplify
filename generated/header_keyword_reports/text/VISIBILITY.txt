@@ -1,0 +1,843 @@
+
+------------------------------------------------------------
+ESO Phase 3 header keyword guide
+Requested data product type: VISIBILITY
+------------------------------------------------------------
+
+Checklist note: this includes keywords that are always mandatory, mandatory for ESO files, or mandatory when applicable.
+The placeholder "i" means a numbered series; include the numbered keywords needed for your data.
+
+------------------------------
+VISIBILITY - Primary HDU mandatory keyword checklist
+------------------------------
+PRODCATG
+ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.)
+ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.)
+ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.)
+ORIGIN
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.)
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.)
+OBJECT
+RA and DEC
+EQUINOX
+RADESYS
+TIMESYS
+EXPTIME
+TEXPTIME
+MJD-OBS
+MJD-END
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.)
+OBIDi (for example: OBID1, OBID2, OBID3, etc.)
+NCOMBINE
+OBSTECH
+PROCSOFT
+REFERENC
+PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN
+SPECSYS
+WAVELMIN
+WAVELMAX
+SPEC_ERR
+SPEC_SYE
+CONTENT
+INSMODE
+VIS2ERR
+T3PHIERR
+SPEC_RES
+CHECKSUM
+DATASUM
+NOESODAT
+
+------------------------------
+VISIBILITY - Extension HDU mandatory keyword checklist
+------------------------------
+CHECKSUM
+DATASUM
+TFIELDS
+TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)
+TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)
+TUNITi (for example: TUNIT1, TUNIT2, TUNIT3, etc.)
+EXTNAME
+
+------------------------------
+VISIBILITY - Primary HDU
+------------------------------
+PRODCATG: Keyword mandatory
+ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.): Keyword mandatory where applicable [footnote 31]
+ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.): Keyword mandatory where applicable [footnote 32]
+ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.): Keyword mandatory where applicable [footnote 31]
+ORIGIN: Keyword mandatory
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.): Keyword mandatory
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.): Keyword mandatory
+OBJECT: Keyword mandatory
+RA and DEC: Keyword mandatory
+EQUINOX: Keyword mandatory where applicable [footnote 37]
+RADESYS: Keyword mandatory
+TIMESYS: Keyword mandatory where applicable [footnote 38]
+EXPTIME: Keyword mandatory
+TEXPTIME: Keyword mandatory
+MJD-OBS: Keyword mandatory
+MJD-END: Keyword mandatory
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.): Keyword mandatory for ESO files
+OBIDi (for example: OBID1, OBID2, OBID3, etc.): Keyword mandatory for ESO files
+NCOMBINE: Keyword mandatory for ESO files
+OBSTECH: Keyword mandatory
+PROCSOFT: Keyword mandatory
+REFERENC: Keyword mandatory [footnote 40]
+PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN: Keyword mandatory for ESO files
+SPECSYS: Keyword mandatory
+WAVELMIN: Keyword mandatory
+WAVELMAX: Keyword mandatory
+SPEC_ERR: Keyword mandatory
+SPEC_SYE: Keyword mandatory
+CONTENT: Keyword mandatory
+INSMODE: Keyword mandatory
+VIS2ERR: Keyword mandatory
+T3PHIERR: Keyword mandatory
+STOKES: Contact Phase 3 support to determine whether the keyword is required
+SPEC_RES: Keyword mandatory
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+NOESODAT: Keyword mandatory where applicable [footnote 59]
+
+------------------------------
+VISIBILITY - Extension HDU
+------------------------------
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+TFIELDS: Keyword mandatory
+TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.): Keyword mandatory
+TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.): Keyword mandatory
+TCOMMi (for example: TCOMM1, TCOMM2, TCOMM3, etc.): It makes sense to provide the value, but it is optional
+TUNITi (for example: TUNIT1, TUNIT2, TUNIT3, etc.): Keyword mandatory where applicable [footnote 60]
+TUCDi (for example: TUCD1, TUCD2, TUCD3, etc.): It makes sense to provide the value, but it is optional
+TDMINi (for example: TDMIN1, TDMIN2, TDMIN3, etc.): It makes sense to provide the value, but it is optional
+TDMAXi (for example: TDMAX1, TDMAX2, TDMAX3, etc.): It makes sense to provide the value, but it is optional
+TNULLi (for example: TNULL1, TNULL2, TNULL3, etc.): It makes sense to provide the value, but it is optional
+EXTNAME: Keyword mandatory where applicable [footnote 65]
+
+------------------------------
+VISIBILITY - Referenced footnotes
+------------------------------
+31: Mandatory for the cases where ancillary files are provided in a non-FITS format.
+32: Mandatory for the cases where ancillary files are provided in association with the scientific data.
+37: If RADESYS='FK5', EQUINOX=2000.0 is mandatory. If RADESYS = 'ICRS', EQUINOX is tolerated and its value needs to be 2000.0.
+38: Must be present if the system used is other than UTC.
+40: If a refereed publication is not available at the time of the data release going public, the value can be left to an empty string.
+59: Applicable to products originating or containing data from a non-ESO facility.
+60: Keyword may be absent for columns representing quantities having no units of measurement, otherwise it must be present.
+65: A specific value is requested in particular cases: 'PHASE3PROVENANCE', 'PHASE3CATALOG', 'PHASE3FILELIST'.
+
+------------------------------
+VISIBILITY - Example archive FITS headers
+Source: https://archive.eso.org/hdr?DpId=ADP.2026-06-24T10:22:30.103
+------------------------------
+HDU 0 - PRIMARY
+SIMPLE               = True
+BITPIX               = 8
+NAXIS                = 0
+EXTEND               = True
+DATE                 = '2026-06-12T12:39:20'
+EXPTIME              = 320.0
+MJD-OBS              = 61192.28697602
+MJD-END              = 61192.2908996311
+TIMESYS              = 'UTC'
+DATE-OBS             = '2026-06-01T06:53:25'
+OBSERVER             = 'UNKNOWN'
+OBJECT               = 'STD,SINGLE'
+ORIGIN               = 'ESO-PARANAL'
+TELESCOP             = 'ESO-VLTI-U1234'
+INSTRUME             = 'GRAVITY'
+RA                   = 300.10834
+DEC                  = -36.92706
+EQUINOX              = 2000.0
+UTC                  = 24793.75
+LST                  = 67843.411
+PI-COI               = 'UNKNOWN'
+RADESYS              = 'FK5'
+VIS2ERR              = 0.00645255551027164
+VISPHERR             = 0.243077231536286
+T3PHIERR             = 0.381822879345889
+BASE_MAX             = 129.73
+BASE_MIN             = 46.624
+NUM_CHAN             = 233
+WAVELMAX             = 2482.19819676265
+WAVELMIN             = 1967.8018090552
+SPEC_BIN             = 4.39655156725394
+SPEC_RES             = 506.078447988617
+TEXPTIME             = 320.0
+PRODCATG             = 'SCIENCE.VISIBILITY'
+VISCAL               = 'UNCALIBRATED'
+OBID1                = 4749061
+NCOMBINE             = 1
+OBSTECH              = 'INTERFEROMETRY,DIRECT'
+SPECSYS              = 'TOPOCENT'
+SPEC_ERR             = 2.2
+SPEC_SYE             = 0.1
+PROV1                = 'GRAVI.2026-06-01T06:53:14.728.fits'
+CONTENT              = 'OIFITS2'
+REFERENC             = '2001PASP..112.1133P'
+PROG_ID              = '117.2A7M.007'
+PROCSOFT             = 'GRAVITY pipeline 1.9.7'
+INSMODE              = 'SINGLE,MEDIUM,COMBINED,COMBINED'
+ARCFILE              = 'ADP.2026-06-24T10:22:30.103.fits'
+DATAMD5              = 'c6c31d2cd2d55376b5159b89474ca271'
+PIPEFILE             = 'r.GRAVI.2026-06-01T06:53:14.728_tpl_0000.fits'
+ASSON1               = 'r.GRAVI.2026-06-01T06:53:14.728_tpl_0000.png'
+ASSOC1               = 'ANCILLARY.PREVIEW'
+ASSOM1               = '0eeb618c18e31700c6661a6365f2f8b9'
+ASSON2               = 'r.GRAVI.2026-06-01T06:53:14.728_tpl_B00.png'
+ASSOC2               = 'ANCILLARY.PREVIEW'
+ASSOM2               = 'dbf461f298c905178b0c7c464d89b19d'
+CHECKSUM             = 'KVVJLUT9KUTGKUT9'
+DATASUM              = '         0'
+ORIGFILE             = 'GR_SCVS_4749061_2026-06-01T06:53:14.728_U1234_SINGLE_ME_COMB.fits'
+P3ORIG               = 'IDP'
+
+HDU 1 - OI_ARRAY
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 80
+NAXIS2               = 4
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 8
+TTYPE1               = 'TEL_NAME'
+TFORM1               = '16A'
+TTYPE2               = 'STA_NAME'
+TFORM2               = '16A'
+TTYPE3               = 'STA_INDEX'
+TFORM3               = '1I'
+TTYPE4               = 'DIAMETER'
+TFORM4               = '1E'
+TUNIT4               = 'm'
+TTYPE5               = 'STAXYZ'
+TFORM5               = '3D'
+TUNIT5               = 'm'
+TTYPE6               = 'MNTSTA'
+TFORM6               = '1J'
+TTYPE7               = 'FOV'
+TFORM7               = '1D'
+TUNIT7               = 'arcsec'
+TTYPE8               = 'FOVTYPE'
+TFORM8               = '6A'
+TELESCOP             = 'ESO-VLTI-U1234'
+EXTNAME              = 'OI_ARRAY'
+ARRNAME              = 'VLTI'
+FRAME                = 'GEOCENTRIC'
+OI_REVN              = 2
+ARRAYX               = 1946405.0
+ARRAYY               = -5467647.0
+ARRAYZ               = -2642729.0
+CHECKSUM             = 'fFKHiCKGfCKGfCKG'
+DATASUM              = '1909056209'
+
+HDU 2 - OI_TARGET
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 134
+NAXIS2               = 1
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 17
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TARGET'
+TFORM2               = '16A'
+TTYPE3               = 'EQUINOX'
+TFORM3               = '1E'
+TUNIT3               = 'yr'
+TTYPE4               = 'RAEP0'
+TFORM4               = '1D'
+TUNIT4               = 'deg'
+TTYPE5               = 'DECEP0'
+TFORM5               = '1D'
+TUNIT5               = 'deg'
+TTYPE6               = 'RA_ERR'
+TFORM6               = '1D'
+TUNIT6               = 'deg'
+TTYPE7               = 'DEC_ERR'
+TFORM7               = '1D'
+TUNIT7               = 'deg'
+TTYPE8               = 'SYSVEL'
+TFORM8               = '1D'
+TUNIT8               = 'm/s'
+TTYPE9               = 'VELTYP'
+TFORM9               = '8A'
+TTYPE10              = 'VELDEF'
+TFORM10              = '8A'
+TTYPE11              = 'PMRA'
+TFORM11              = '1D'
+TUNIT11              = 'deg/yr'
+TTYPE12              = 'PMDEC'
+TFORM12              = '1D'
+TUNIT12              = 'deg/yr'
+TTYPE13              = 'PMRA_ERR'
+TFORM13              = '1D'
+TUNIT13              = 'deg/yr'
+TTYPE14              = 'PMDEC_ERR'
+TFORM14              = '1D'
+TUNIT14              = 'deg/yr'
+TTYPE15              = 'PARALLAX'
+TFORM15              = '1E'
+TUNIT15              = 'deg'
+TTYPE16              = 'PARA_ERR'
+TFORM16              = '1E'
+TUNIT16              = 'deg'
+TTYPE17              = 'SPECTYP'
+TFORM17              = '16A'
+EXTNAME              = 'OI_TARGET'
+OI_REVN              = 2
+CHECKSUM             = 'Qf2UQc0UQc0UQc0U'
+DATASUM              = '2960947283'
+
+HDU 3 - OI_WAVELENGTH
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 8
+NAXIS2               = 233
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 2
+TTYPE1               = 'EFF_WAVE'
+TFORM1               = '1E'
+TUNIT1               = 'm'
+TTYPE2               = 'EFF_BAND'
+TFORM2               = '1E'
+TUNIT2               = 'm'
+NWAVE                = 233
+OI_REVN              = 2
+INSNAME              = 'GRAVITY_SC'
+EXTVER               = 10
+EXTNAME              = 'OI_WAVELENGTH'
+CHECKSUM             = 'DLcmFLajDLajDLaj'
+DATASUM              = '1541728535'
+
+HDU 4 - OI_WAVELENGTH
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 8
+NAXIS2               = 6
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 2
+TTYPE1               = 'EFF_WAVE'
+TFORM1               = '1E'
+TUNIT1               = 'm'
+TTYPE2               = 'EFF_BAND'
+TFORM2               = '1E'
+TUNIT2               = 'm'
+NWAVE                = 6
+OI_REVN              = 2
+INSNAME              = 'GRAVITY_FT'
+EXTVER               = 20
+EXTNAME              = 'OI_WAVELENGTH'
+CHECKSUM             = 'mIljnIigmIigmIig'
+DATASUM              = '2059464357'
+
+HDU 5 - OI_VIS
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 636
+NAXIS2               = 6
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 20
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'VISDATA'
+TFORM5               = '6M'
+TUNIT5               = 'e'
+TTYPE6               = 'VISERR'
+TFORM6               = '6M'
+TUNIT6               = 'e'
+TTYPE7               = 'VISAMP'
+TFORM7               = '6D'
+TTYPE8               = 'VISAMPERR'
+TFORM8               = '6D'
+TTYPE9               = 'VISPHI'
+TFORM9               = '6D'
+TUNIT9               = 'deg'
+TTYPE10              = 'VISPHIERR'
+TFORM10              = '6D'
+TUNIT10              = 'deg'
+TTYPE11              = 'RVIS'
+TFORM11              = '6D'
+TUNIT11              = 'e'
+TTYPE12              = 'RVISERR'
+TFORM12              = '6D'
+TUNIT12              = 'e'
+TTYPE13              = 'IVIS'
+TFORM13              = '6D'
+TUNIT13              = 'e'
+TTYPE14              = 'IVISERR'
+TFORM14              = '6D'
+TUNIT14              = 'e'
+TTYPE15              = 'UCOORD'
+TFORM15              = '1D'
+TUNIT15              = 'm'
+TTYPE16              = 'VCOORD'
+TFORM16              = '1D'
+TUNIT16              = 'm'
+TTYPE17              = 'STA_INDEX'
+TFORM17              = '2I'
+TTYPE18              = 'FLAG'
+TFORM18              = '6L'
+TTYPE19              = 'NDIT'
+TFORM19              = '1J'
+TTYPE20              = 'NVALID'
+TFORM20              = '1J'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 20
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_FT'
+AMPTYP               = 'absolute'
+PHITYP               = 'differential'
+PHIORDER             = 1
+EXTNAME              = 'OI_VIS'
+OI_REVN              = 2
+CHECKSUM             = 'HLrAKJo1HJo8HJo8'
+DATASUM              = '1281952727'
+
+HDU 6 - OI_VIS2
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 156
+NAXIS2               = 6
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 12
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'VIS2DATA'
+TFORM5               = '6D'
+TTYPE6               = 'VIS2ERR'
+TFORM6               = '6D'
+TTYPE7               = 'UCOORD'
+TFORM7               = '1D'
+TUNIT7               = 'm'
+TTYPE8               = 'VCOORD'
+TFORM8               = '1D'
+TUNIT8               = 'm'
+TTYPE9               = 'STA_INDEX'
+TFORM9               = '2I'
+TTYPE10              = 'FLAG'
+TFORM10              = '6L'
+TTYPE11              = 'NDIT'
+TFORM11              = '1J'
+TTYPE12              = 'NVALID'
+TFORM12              = '1J'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 20
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_FT'
+EXTNAME              = 'OI_VIS2'
+OI_REVN              = 2
+CHECKSUM             = 'JmdFMlZFJldFJlZF'
+DATASUM              = '2190559452'
+
+HDU 7 - OI_T3
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 270
+NAXIS2               = 4
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 16
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'T3AMP'
+TFORM5               = '6D'
+TTYPE6               = 'T3AMPERR'
+TFORM6               = '6D'
+TTYPE7               = 'T3PHI'
+TFORM7               = '6D'
+TUNIT7               = 'deg'
+TTYPE8               = 'T3PHIERR'
+TFORM8               = '6D'
+TUNIT8               = 'deg'
+TTYPE9               = 'U1COORD'
+TFORM9               = '1D'
+TUNIT9               = 'm'
+TTYPE10              = 'V1COORD'
+TFORM10              = '1D'
+TUNIT10              = 'm'
+TTYPE11              = 'U2COORD'
+TFORM11              = '1D'
+TUNIT11              = 'm'
+TTYPE12              = 'V2COORD'
+TFORM12              = '1D'
+TUNIT12              = 'm'
+TTYPE13              = 'STA_INDEX'
+TFORM13              = '3I'
+TTYPE14              = 'FLAG'
+TFORM14              = '6L'
+TTYPE15              = 'NDIT'
+TFORM15              = '1J'
+TTYPE16              = 'NVALID'
+TFORM16              = '1J'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 20
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_FT'
+EXTNAME              = 'OI_T3'
+OI_REVN              = 2
+CHECKSUM             = 'XUaiaRRfRRXfXRXf'
+DATASUM              = '3285839555'
+
+HDU 8 - OI_FLUX
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 138
+NAXIS2               = 4
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 10
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'FLUXERR'
+TFORM5               = '6D'
+TUNIT5               = 'e'
+TTYPE6               = 'STA_INDEX'
+TFORM6               = '1I'
+TTYPE7               = 'FLAG'
+TFORM7               = '6L'
+TTYPE8               = 'NDIT'
+TFORM8               = '1J'
+TTYPE9               = 'NVALID'
+TFORM9               = '1J'
+TTYPE10              = 'FLUXDATA'
+TFORM10              = '6D'
+TUNIT10              = 'e'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 20
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_FT'
+CALSTAT              = 'U'
+EXTNAME              = 'OI_FLUX'
+OI_REVN              = 1
+CHECKSUM             = 'IpOYJmLWImLWImLW'
+DATASUM              = '3464515483'
+
+HDU 9 - OI_VIS
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 22831
+NAXIS2               = 6
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 29
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'VISDATA'
+TFORM5               = '233M'
+TUNIT5               = 'e'
+TTYPE6               = 'VISERR'
+TFORM6               = '233M'
+TUNIT6               = 'e'
+TTYPE7               = 'VISAMP'
+TFORM7               = '233D'
+TTYPE8               = 'VISAMPERR'
+TFORM8               = '233D'
+TTYPE9               = 'VISPHI'
+TFORM9               = '233D'
+TUNIT9               = 'deg'
+TTYPE10              = 'VISPHIERR'
+TFORM10              = '233D'
+TUNIT10              = 'deg'
+TTYPE11              = 'RVIS'
+TFORM11              = '233D'
+TUNIT11              = 'e'
+TTYPE12              = 'RVISERR'
+TFORM12              = '233D'
+TUNIT12              = 'e'
+TTYPE13              = 'IVIS'
+TFORM13              = '233D'
+TUNIT13              = 'e'
+TTYPE14              = 'IVISERR'
+TFORM14              = '233D'
+TUNIT14              = 'e'
+TTYPE15              = 'UCOORD'
+TFORM15              = '1D'
+TUNIT15              = 'm'
+TTYPE16              = 'VCOORD'
+TFORM16              = '1D'
+TUNIT16              = 'm'
+TTYPE17              = 'STA_INDEX'
+TFORM17              = '2I'
+TTYPE18              = 'FLAG'
+TFORM18              = '233L'
+TTYPE19              = 'NDIT'
+TFORM19              = '1J'
+TTYPE20              = 'NVALID'
+TFORM20              = '1J'
+TTYPE21              = 'GDELAY'
+TFORM21              = '1D'
+TUNIT21              = 'm'
+TTYPE22              = 'PHASE'
+TFORM22              = '1D'
+TUNIT22              = 'rad'
+TTYPE23              = 'OPD_MET_FC'
+TFORM23              = '1D'
+TUNIT23              = 'm'
+TTYPE24              = 'PHASE_REF_COEFF'
+TFORM24              = '4D'
+TTYPE25              = 'E_U'
+TFORM25              = '3D'
+TTYPE26              = 'E_V'
+TFORM26              = '3D'
+TTYPE27              = 'E_W'
+TFORM27              = '3D'
+TTYPE28              = 'E_AZ'
+TFORM28              = '3D'
+TTYPE29              = 'E_ZD'
+TFORM29              = '3D'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 10
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_SC'
+AMPTYP               = 'absolute'
+PHIORDER             = 1
+EXTNAME              = 'OI_VIS'
+OI_REVN              = 2
+CHECKSUM             = 'b39Fe089b08Eb089'
+DATASUM              = '1433351122'
+
+HDU 10 - OI_VIS2
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 4015
+NAXIS2               = 6
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 12
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'VIS2DATA'
+TFORM5               = '233D'
+TTYPE6               = 'VIS2ERR'
+TFORM6               = '233D'
+TTYPE7               = 'UCOORD'
+TFORM7               = '1D'
+TUNIT7               = 'm'
+TTYPE8               = 'VCOORD'
+TFORM8               = '1D'
+TUNIT8               = 'm'
+TTYPE9               = 'STA_INDEX'
+TFORM9               = '2I'
+TTYPE10              = 'FLAG'
+TFORM10              = '233L'
+TTYPE11              = 'NDIT'
+TFORM11              = '1J'
+TTYPE12              = 'NVALID'
+TFORM12              = '1J'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 10
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_SC'
+EXTNAME              = 'OI_VIS2'
+OI_REVN              = 2
+CHECKSUM             = 'Oa9IOX79Oa7GOU79'
+DATASUM              = '486722770'
+
+HDU 11 - OI_T3
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 7761
+NAXIS2               = 4
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 16
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'T3AMP'
+TFORM5               = '233D'
+TTYPE6               = 'T3AMPERR'
+TFORM6               = '233D'
+TTYPE7               = 'T3PHI'
+TFORM7               = '233D'
+TUNIT7               = 'deg'
+TTYPE8               = 'T3PHIERR'
+TFORM8               = '233D'
+TUNIT8               = 'deg'
+TTYPE9               = 'U1COORD'
+TFORM9               = '1D'
+TUNIT9               = 'm'
+TTYPE10              = 'V1COORD'
+TFORM10              = '1D'
+TUNIT10              = 'm'
+TTYPE11              = 'U2COORD'
+TFORM11              = '1D'
+TUNIT11              = 'm'
+TTYPE12              = 'V2COORD'
+TFORM12              = '1D'
+TUNIT12              = 'm'
+TTYPE13              = 'STA_INDEX'
+TFORM13              = '3I'
+TTYPE14              = 'FLAG'
+TFORM14              = '233L'
+TTYPE15              = 'NDIT'
+TFORM15              = '1J'
+TTYPE16              = 'NVALID'
+TFORM16              = '1J'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 10
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_SC'
+EXTNAME              = 'OI_T3'
+OI_REVN              = 2
+CHECKSUM             = 'DGYOD9WMDGWMD9WM'
+DATASUM              = '2223604512'
+
+HDU 12 - OI_FLUX
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 4037
+NAXIS2               = 4
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 15
+TTYPE1               = 'TARGET_ID'
+TFORM1               = '1I'
+TTYPE2               = 'TIME'
+TFORM2               = '1D'
+TUNIT2               = 's'
+TTYPE3               = 'MJD'
+TFORM3               = '1D'
+TUNIT3               = 'd'
+TTYPE4               = 'INT_TIME'
+TFORM4               = '1D'
+TUNIT4               = 's'
+TTYPE5               = 'FLUXERR'
+TFORM5               = '233D'
+TUNIT5               = 'e'
+TTYPE6               = 'STA_INDEX'
+TFORM6               = '1I'
+TTYPE7               = 'FLAG'
+TFORM7               = '233L'
+TTYPE8               = 'NDIT'
+TFORM8               = '1J'
+TTYPE9               = 'NVALID'
+TFORM9               = '1J'
+TTYPE10              = 'LKDT_MET_FC'
+TFORM10              = '1D'
+TUNIT10              = 'mjd'
+TTYPE11              = 'OPD_MET_FC'
+TFORM11              = '1D'
+TUNIT11              = 'm'
+TTYPE12              = 'FT_POS'
+TFORM12              = '1D'
+TUNIT12              = 'V'
+TTYPE13              = 'SC_POS'
+TFORM13              = '1D'
+TUNIT13              = 'V'
+TTYPE14              = 'OPL_AIR'
+TFORM14              = '1D'
+TUNIT14              = 'm'
+TTYPE15              = 'FLUXDATA'
+TFORM15              = '233D'
+TUNIT15              = 'e'
+DATE-OBS             = '2026-06-01T06:53:25'
+EXTVER               = 10
+ARRNAME              = 'VLTI'
+INSNAME              = 'GRAVITY_SC'
+CALSTAT              = 'U'
+EXTNAME              = 'OI_FLUX'
+OI_REVN              = 1
+CHECKSUM             = 'PhMRSfKOPfKOPfKO'
+DATASUM              = '4096701257'
+
+HDU 13 - IMAGING_DATA_ACQ
+XTENSION             = 'IMAGE'
+BITPIX               = -64
+NAXIS                = 3
+NAXIS1               = 1000
+NAXIS2               = 1000
+NAXIS3               = 1
+PCOUNT               = 0
+GCOUNT               = 1
+INSNAME              = 'GRAVITY_ACQ'
+EXTNAME              = 'IMAGING_DATA_ACQ'
+CHECKSUM             = 'RQGhSPGhRPGhRPGh'
+DATASUM              = '1903631786'
+

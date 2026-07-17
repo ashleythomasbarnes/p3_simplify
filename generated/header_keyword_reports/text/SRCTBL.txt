@@ -1,0 +1,493 @@
+
+------------------------------------------------------------
+ESO Phase 3 header keyword guide
+Requested data product type: SRCTBL
+------------------------------------------------------------
+
+Checklist note: this includes keywords that are always mandatory, mandatory for ESO files, or mandatory when applicable.
+The placeholder "i" means a numbered series; include the numbered keywords needed for your data.
+
+------------------------------
+SRCTBL - Primary HDU mandatory keyword checklist
+------------------------------
+PRODCATG
+ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.)
+ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.)
+ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.)
+ORIGIN
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.)
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.)
+FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.)
+OBJECT
+RA and DEC
+EQUINOX
+RADESYS
+TIMESYS
+EXPTIME
+TEXPTIME
+MJD-OBS
+MJD-END
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.)
+OBIDi (for example: OBID1, OBID2, OBID3, etc.)
+NCOMBINE
+OBSTECH
+PROCSOFT
+REFERENC
+PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN
+ABMAGLIM
+STREHL
+CHECKSUM
+DATASUM
+NOESODAT
+
+------------------------------
+SRCTBL - Extension HDU mandatory keyword checklist
+------------------------------
+PHOTZP
+PHOTSYS
+ABMAGLIM
+ABMAGSAT
+PSF_FWHM
+ELLIPTIC
+CHECKSUM
+DATASUM
+TFIELDS
+TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)
+TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)
+TUNITi (for example: TUNIT1, TUNIT2, TUNIT3, etc.)
+EXTNAME
+
+------------------------------
+SRCTBL - Primary HDU
+------------------------------
+PRODCATG: Keyword mandatory
+ASSOCi (for example: ASSOC1, ASSOC2, ASSOC3, etc.): Keyword mandatory where applicable [footnote 31]
+ASSONi (for example: ASSON1, ASSON2, ASSON3, etc.): Keyword mandatory where applicable [footnote 32]
+ASSOMi (for example: ASSOM1, ASSOM2, ASSOM3, etc.): Keyword mandatory where applicable [footnote 31]
+ORIGIN: Keyword mandatory
+TELESCOP or TELESCi (for example: TELESC1, TELESC2, TELESC3, etc.): Keyword mandatory
+INSTRUME or INSTRi (for example: INSTR1, INSTR2, INSTR3, etc.): Keyword mandatory
+FILTER or FILTERi (for example: FILTER1, FILTER2, FILTER3, etc.): Keyword mandatory
+OBJECT: Keyword mandatory
+RA and DEC: Keyword mandatory
+EQUINOX: Keyword mandatory where applicable [footnote 37]
+RADESYS: Keyword mandatory
+TIMESYS: Keyword mandatory where applicable [footnote 38]
+EXPTIME: Keyword mandatory
+TEXPTIME: Keyword mandatory
+MJD-OBS: Keyword mandatory
+MJD-END: Keyword mandatory
+PROG_ID or PROGIDi (for example: PROGID1, PROGID2, PROGID3, etc.): Keyword mandatory for ESO files
+OBIDi (for example: OBID1, OBID2, OBID3, etc.): Keyword mandatory for ESO files
+NCOMBINE: Keyword mandatory for ESO files
+OBSTECH: Keyword mandatory
+PROCSOFT: Keyword mandatory
+REFERENC: Keyword mandatory [footnote 40]
+PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN: Keyword mandatory for ESO files
+STOKES: Contact Phase 3 support to determine whether the keyword is required
+ABMAGLIM: Keyword mandatory
+STREHL: Keyword mandatory where applicable [footnote 51]
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+NOESODAT: Keyword mandatory where applicable [footnote 59]
+
+------------------------------
+SRCTBL - Extension HDU
+------------------------------
+PHOTZP: Keyword mandatory where applicable [footnote 41]
+PHOTZPER: Keyword recommended
+PHOTSYS: Keyword mandatory
+ABMAGLIM: Keyword mandatory
+ABMAGSAT: Keyword mandatory
+PSF_FWHM: Keyword mandatory
+ELLIPTIC: Keyword mandatory [footnote 49]
+ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
+ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+TFIELDS: Keyword mandatory
+TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.): Keyword mandatory
+TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.): Keyword mandatory
+TCOMMi (for example: TCOMM1, TCOMM2, TCOMM3, etc.): It makes sense to provide the value, but it is optional
+TUNITi (for example: TUNIT1, TUNIT2, TUNIT3, etc.): Keyword mandatory where applicable [footnote 60]
+TUCDi (for example: TUCD1, TUCD2, TUCD3, etc.): It makes sense to provide the value, but it is optional
+TDMINi (for example: TDMIN1, TDMIN2, TDMIN3, etc.): It makes sense to provide the value, but it is optional
+TDMAXi (for example: TDMAX1, TDMAX2, TDMAX3, etc.): It makes sense to provide the value, but it is optional
+TNULLi (for example: TNULL1, TNULL2, TNULL3, etc.): It makes sense to provide the value, but it is optional
+EXTNAME: Keyword mandatory where applicable [footnote 65]
+
+------------------------------
+SRCTBL - Referenced footnotes
+------------------------------
+31: Mandatory for the cases where ancillary files are provided in a non-FITS format.
+32: Mandatory for the cases where ancillary files are provided in association with the scientific data.
+37: If RADESYS='FK5', EQUINOX=2000.0 is mandatory. If RADESYS = 'ICRS', EQUINOX is tolerated and its value needs to be 2000.0.
+38: Must be present if the system used is other than UTC.
+40: If a refereed publication is not available at the time of the data release going public, the value can be left to an empty string.
+41: Mandatory depending on whether fluxes or magnitudes are provided in the source list.
+49: For VIRCAM and OmegaCAM only.
+51: For AO observations only.
+59: Applicable to products originating or containing data from a non-ESO facility.
+60: Keyword may be absent for columns representing quantities having no units of measurement, otherwise it must be present.
+65: A specific value is requested in particular cases: 'PHASE3PROVENANCE', 'PHASE3CATALOG', 'PHASE3FILELIST'.
+
+------------------------------
+SRCTBL - Example archive FITS headers
+Source: https://archive.eso.org/hdr?DpId=ADP.2026-05-18T11:41:29.594
+------------------------------
+HDU 0 - PRIMARY
+SIMPLE               = True
+BITPIX               = 8
+NAXIS                = 0
+EXTEND               = True
+DATE                 = '2026-05-18T10:18:47'
+ORIGIN               = 'ESO-PARANAL'
+TELESCOP             = 'ESO-VLT-U4'
+INSTRUME             = 'HAWKI'
+OBJECT               = 'GRB260510B'
+RA                   = 173.258598875643
+DEC                  = -34.5212929241445
+EQUINOX              = 2000.0
+EXPTIME              = 480.0
+MJD-OBS              = 61171.02187729
+DATE-OBS             = '2026-05-11T00:31:30.1981'
+UTC                  = 1886.0
+LST                  = 39905.411
+PI-COI               = 'UNKNOWN'
+OBSERVER             = 'UNKNOWN'
+RADESYS              = 'ICRS'
+MJD-END              = 61171.0301015844
+DATAMD5              = 'cd488147d96351c03c92820682f519c1'
+PIPEFILE             = 'tile_cat_1.fits'
+PROCSOFT             = '2.5.17'
+OBSTECH              = 'IMAGE'
+IMATYPE              = 'TILE'
+ISAMP                = False
+FILTER               = 'H'
+TEXPTIME             = 480.0
+EFF_EXPT             = 60.0
+PROG_ID              = '114.27PZ.024'
+OBID1                = 4888902
+M_EPOCH              = False
+REFERENC             = ''
+DIT                  = 10.0
+SINGLEXP             = False
+NCOMBINE             = 8
+PRODCATG             = 'SCIENCE.SRCTBL'
+FLUXCAL              = 'ABSOLUTE'
+NSTACK               = 8
+ARCFILE              = 'ADP.2026-05-18T11:41:29.594.fits'
+PROV1                = 'HAWKI_TILED_IMAGE_2026-05-11T00:31:30.1981.fits'
+CHECKSUM             = 'WakgWUkgWakgWUkg'
+DATASUM              = '0'
+OB_GRADE             = 'A'
+OB_COMM1             = 'none'
+QC_COMM1             = 'none'
+VM_SM                = 'SM'
+ORIGFILE             = 'HAWKI_TILED_OBJECT_CATALOGUE_2026-05-11T00:31:30.1981.fits'
+P3ORIG               = 'IDP'
+
+HDU 1 - CHIP1.INT1
+XTENSION             = 'BINTABLE'
+BITPIX               = 8
+NAXIS                = 2
+NAXIS1               = 320
+NAXIS2               = 2188
+PCOUNT               = 0
+GCOUNT               = 1
+TFIELDS              = 80
+TTYPE1               = 'Sequence_number'
+TFORM1               = '1J'
+TUNIT1               = 'Number'
+TTYPE2               = 'Isophotal_flux'
+TFORM2               = '1E'
+TUNIT2               = 'ADU'
+TTYPE3               = 'X_coordinate'
+TFORM3               = '1E'
+TUNIT3               = 'Pixels'
+TTYPE4               = 'X_coordinate_err'
+TFORM4               = '1E'
+TUNIT4               = 'Pixels'
+TTYPE5               = 'Y_coordinate'
+TFORM5               = '1E'
+TUNIT5               = 'Pixels'
+TTYPE6               = 'Y_coordinate_err'
+TFORM6               = '1E'
+TUNIT6               = 'Pixels'
+TTYPE7               = 'Gaussian_sigma'
+TFORM7               = '1E'
+TUNIT7               = 'Pixels'
+TTYPE8               = 'Ellipticity'
+TFORM8               = '1E'
+TUNIT8               = 'Number'
+TTYPE9               = 'Position_angle'
+TFORM9               = '1E'
+TUNIT9               = 'Degrees'
+TTYPE10              = 'Areal_1_profile'
+TFORM10              = '1E'
+TUNIT10              = 'Pixels'
+TTYPE11              = 'Areal_2_profile'
+TFORM11              = '1E'
+TUNIT11              = 'Pixels'
+TTYPE12              = 'Areal_3_profile'
+TFORM12              = '1E'
+TUNIT12              = 'Pixels'
+TTYPE13              = 'Areal_4_profile'
+TFORM13              = '1E'
+TUNIT13              = 'Pixels'
+TTYPE14              = 'Areal_5_profile'
+TFORM14              = '1E'
+TUNIT14              = 'Pixels'
+TTYPE15              = 'Areal_6_profile'
+TFORM15              = '1E'
+TUNIT15              = 'Pixels'
+TTYPE16              = 'Areal_7_profile'
+TFORM16              = '1E'
+TUNIT16              = 'Pixels'
+TTYPE17              = 'Areal_8_profile'
+TFORM17              = '1E'
+TUNIT17              = 'Pixels'
+TTYPE18              = 'Peak_height'
+TFORM18              = '1E'
+TUNIT18              = 'ADU'
+TTYPE19              = 'Peak_height_err'
+TFORM19              = '1E'
+TUNIT19              = 'ADU'
+TTYPE20              = 'Aper_flux_1'
+TFORM20              = '1E'
+TUNIT20              = 'ADU'
+TTYPE21              = 'Aper_flux_1_err'
+TFORM21              = '1E'
+TUNIT21              = 'ADU'
+TTYPE22              = 'Aper_flux_2'
+TFORM22              = '1E'
+TUNIT22              = 'ADU'
+TTYPE23              = 'Aper_flux_2_err'
+TFORM23              = '1E'
+TUNIT23              = 'ADU'
+TTYPE24              = 'Aper_flux_3'
+TFORM24              = '1E'
+TUNIT24              = 'ADU'
+TTYPE25              = 'Aper_flux_3_err'
+TFORM25              = '1E'
+TUNIT25              = 'ADU'
+TTYPE26              = 'Aper_flux_4'
+TFORM26              = '1E'
+TUNIT26              = 'ADU'
+TTYPE27              = 'Aper_flux_4_err'
+TFORM27              = '1E'
+TUNIT27              = 'ADU'
+TTYPE28              = 'Aper_flux_5'
+TFORM28              = '1E'
+TUNIT28              = 'ADU'
+TTYPE29              = 'Aper_flux_5_err'
+TFORM29              = '1E'
+TUNIT29              = 'ADU'
+TTYPE30              = 'Aper_flux_6'
+TFORM30              = '1E'
+TUNIT30              = 'ADU'
+TTYPE31              = 'Aper_flux_6_err'
+TFORM31              = '1E'
+TUNIT31              = 'ADU'
+TTYPE32              = 'Aper_flux_7'
+TFORM32              = '1E'
+TUNIT32              = 'ADU'
+TTYPE33              = 'Aper_flux_7_err'
+TFORM33              = '1E'
+TUNIT33              = 'ADU'
+TTYPE34              = 'Aper_flux_8'
+TFORM34              = '1E'
+TUNIT34              = 'ADU'
+TTYPE35              = 'Aper_flux_8_err'
+TFORM35              = '1E'
+TUNIT35              = 'ADU'
+TTYPE36              = 'Aper_flux_9'
+TFORM36              = '1E'
+TUNIT36              = 'ADU'
+TTYPE37              = 'Aper_flux_9_err'
+TFORM37              = '1E'
+TUNIT37              = 'ADU'
+TTYPE38              = 'Aper_flux_10'
+TFORM38              = '1E'
+TUNIT38              = 'ADU'
+TTYPE39              = 'Aper_flux_10_err'
+TFORM39              = '1E'
+TUNIT39              = 'ADU'
+TTYPE40              = 'Aper_flux_11'
+TFORM40              = '1E'
+TUNIT40              = 'ADU'
+TTYPE41              = 'Aper_flux_11_err'
+TFORM41              = '1E'
+TUNIT41              = 'ADU'
+TTYPE42              = 'Aper_flux_12'
+TFORM42              = '1E'
+TUNIT42              = 'ADU'
+TTYPE43              = 'Aper_flux_12_err'
+TFORM43              = '1E'
+TUNIT43              = 'ADU'
+TTYPE44              = 'Aper_flux_13'
+TFORM44              = '1E'
+TUNIT44              = 'ADU'
+TTYPE45              = 'Aper_flux_13_err'
+TFORM45              = '1E'
+TUNIT45              = 'ADU'
+TTYPE46              = 'Petr_radius'
+TFORM46              = '1E'
+TUNIT46              = 'Pixels'
+TTYPE47              = 'Kron_radius'
+TFORM47              = '1E'
+TUNIT47              = 'Pixels'
+TTYPE48              = 'Half_radius'
+TFORM48              = '1E'
+TUNIT48              = 'Pixels'
+TTYPE49              = 'Petr_flux'
+TFORM49              = '1E'
+TUNIT49              = 'ADU'
+TTYPE50              = 'Petr_flux_err'
+TFORM50              = '1E'
+TUNIT50              = 'ADU'
+TTYPE51              = 'Kron_flux'
+TFORM51              = '1E'
+TUNIT51              = 'ADU'
+TTYPE52              = 'Kron_flux_err'
+TFORM52              = '1E'
+TUNIT52              = 'ADU'
+TTYPE53              = 'Half_flux'
+TFORM53              = '1E'
+TUNIT53              = 'ADU'
+TTYPE54              = 'Half_flux_err'
+TFORM54              = '1E'
+TUNIT54              = 'ADU'
+TTYPE55              = 'Error_bit_flag'
+TFORM55              = '1E'
+TUNIT55              = 'Number'
+TTYPE56              = 'Sky_level'
+TFORM56              = '1E'
+TUNIT56              = 'ADU'
+TTYPE57              = 'Sky_rms'
+TFORM57              = '1E'
+TUNIT57              = 'ADU'
+TTYPE58              = 'Av_conf'
+TFORM58              = '1E'
+TUNIT58              = 'Number'
+TTYPE59              = 'RA'
+TFORM59              = '1E'
+TUNIT59              = 'Degrees'
+TTYPE60              = 'DEC'
+TFORM60              = '1E'
+TUNIT60              = 'Degrees'
+TTYPE61              = 'Classification'
+TFORM61              = '1E'
+TUNIT61              = 'Flag'
+TTYPE62              = 'Statistic'
+TFORM62              = '1E'
+TUNIT62              = 'N-sigma'
+TTYPE63              = 'Blank63'
+TFORM63              = '1E'
+TUNIT63              = 'Blank63'
+TTYPE64              = 'Blank64'
+TFORM64              = '1E'
+TUNIT64              = 'Blank64'
+TTYPE65              = 'Blank65'
+TFORM65              = '1E'
+TUNIT65              = 'Blank65'
+TTYPE66              = 'Blank66'
+TFORM66              = '1E'
+TUNIT66              = 'Blank66'
+TTYPE67              = 'Blank67'
+TFORM67              = '1E'
+TUNIT67              = 'Blank67'
+TTYPE68              = 'Blank68'
+TFORM68              = '1E'
+TUNIT68              = 'Blank68'
+TTYPE69              = 'Blank69'
+TFORM69              = '1E'
+TUNIT69              = 'Blank69'
+TTYPE70              = 'Blank70'
+TFORM70              = '1E'
+TUNIT70              = 'Blank70'
+TTYPE71              = 'Blank71'
+TFORM71              = '1E'
+TUNIT71              = 'Blank71'
+TTYPE72              = 'Blank72'
+TFORM72              = '1E'
+TUNIT72              = 'Blank72'
+TTYPE73              = 'Blank73'
+TFORM73              = '1E'
+TUNIT73              = 'Blank73'
+TTYPE74              = 'Blank74'
+TFORM74              = '1E'
+TUNIT74              = 'Blank74'
+TTYPE75              = 'Blank75'
+TFORM75              = '1E'
+TUNIT75              = 'Blank75'
+TTYPE76              = 'Blank76'
+TFORM76              = '1E'
+TUNIT76              = 'Blank76'
+TTYPE77              = 'Blank77'
+TFORM77              = '1E'
+TUNIT77              = 'Blank77'
+TTYPE78              = 'Blank78'
+TFORM78              = '1E'
+TUNIT78              = 'Blank78'
+TTYPE79              = 'Blank79'
+TFORM79              = '1E'
+TUNIT79              = 'Blank79'
+TTYPE80              = 'Blank80'
+TFORM80              = '1E'
+TUNIT80              = 'Blank80'
+EXTNAME              = 'CHIP1.INT1'
+INHERIT              = True
+READNOIS             = 4.347054
+GAIN                 = 1.963882
+PHOTSYS              = 'VEGA'
+ABMAGSAT             = 19.6049842834473
+PHOTZP               = 28.9429239106477
+ABMAGLIM             = 26.2691402435303
+MJD_MEAN             = 61171.0256550987
+TCTYP3               = 'RA---TAN'
+TCTYP5               = 'DEC--TAN'
+TCRVL3               = 173.25800663075
+TCRVL5               = -34.5189982475921
+TC3_3                = -2.96013908323451e-05
+TC3_5                = 3.35894438350263e-07
+TC5_3                = 3.39912962930972e-07
+TC5_5                = 2.95984473014499e-05
+APCORPK              = 3.235723
+APCOR1               = 0.5578575
+APCOR2               = 0.1117964
+APCOR3               = 0.06389141
+APCOR4               = 0.0372963
+APCOR5               = 0.01998997
+APCOR6               = 0.00915432
+APCOR7               = 0.0
+SYMBOL1              = '{Ellipticity Position_angle Areal_1_profile Classification} {el'
+SYMBOL2              = 'lipse blue (1.0-$Ellipticity) $Position_angle+90 {} $Classific'
+SYMBOL3              = 'ation==1} {sqrt($Areal_1_profile*(1.0-$Ellipticity)/3.142)} : {'
+SYMBOL4              = 'Ellipticity Position_angle Areal_1_profile Classification} {el'
+SYMBOL5              = 'lipse red (1.0-$Ellipticity) $Position_angle+90 {} $Classific'
+SYMBOL6              = 'ation==-1} {sqrt($Areal_1_profile*(1.0-$Ellipticity)/3.142)} :'
+SYMBOL7              = '{Ellipticity Position_angle Areal_1_profile Classification} {el'
+SYMBOL8              = 'lipse green (1.0-$Ellipticity) $Position_angle+90 {} $Classifi'
+SYMBOL9              = 'cation==0} {sqrt($Areal_1_profile*(1.0-$Ellipticity)/3.142)}'
+PSF_FWHM             = 0.3519958
+ELLIPTIC             = 0.083821
+TCRPX3               = 2227.09376141584
+TCRPX5               = 2276.6539375389
+TCUNI3               = 'deg'
+TCUNI5               = 'deg'
+TCSY3                = 0.0
+TCSY5                = 0.0
+TCRD3                = 0.193411469414265
+TCRD5                = 0.193411469414265
+PHOTZPER             = 0.0936771407723427
+ZPFUDGED             = False
+ARCFILE              = 'HAWKI.2026-05-11T00:31:30.198.fits'
+HISTORY              = "= 'IMCORE version: $Date: 2015/09/22 15:09:20 $' /"
+CHECKSUM             = 'gAWah9UTgAUZg9UZ'
+DATASUM              = '3191592525'
+
