@@ -78,11 +78,11 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | STOKES | `SU` | Contact Phase 3 support to determine whether the keyword is required |
 | **ABMAGLIM** | `MA47` | Keyword mandatory where applicable [footnote 47] |
 | **MAGLIMi (for example: MAGLIM1, MAGLIM2, MAGLIM3, etc.)** | `MA48` | Keyword mandatory where applicable [footnote 48] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ARCFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ORIGFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
+| P3ORIG | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **FPRAia** | `MA53` | Keyword mandatory where applicable [footnote 53] |
 | **FPDEia** | `MA53` | Keyword mandatory where applicable [footnote 53] |
 | **SKYSQDEG** | `MM` | Keyword mandatory |
@@ -101,11 +101,8 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 
 | Keyword | Requirement | Meaning |
 | --- | --- | --- |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **TFIELDS** | `MM` | Keyword mandatory |
 | **TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)** | `MM` | Keyword mandatory |
 | **TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)** | `MM` | Keyword mandatory |

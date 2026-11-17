@@ -55,6 +55,10 @@ LEGACY_LEGEND = {
     "M": "Keyword mandatory.",
     "RC": "Keyword recommended.",
     "SU": "Contact Phase 3 support to determine whether the keyword is required.",
+    "RS": (
+        "Reserved keyword. If present, modified by the Phase 3 system during "
+        "the archiving process."
+    ),
 }
 
 

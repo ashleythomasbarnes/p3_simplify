@@ -108,11 +108,11 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **SKY_RES** | `MM` | Keyword mandatory |
 | **SKY_RERR** | `MA50` | Keyword mandatory where applicable [footnote 50] |
 | **STREHL** | `MA51` | Keyword mandatory where applicable [footnote 51] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ARCFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ORIGFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
+| P3ORIG | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **NOESODAT** | `MA59` | Keyword mandatory where applicable [footnote 59] |
 
 ### Extension HDU
@@ -134,11 +134,8 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **SCIDATA** | `MA46` | Keyword mandatory where applicable [footnote 46] |
 | **ERRDATA** | `MA46` | Keyword mandatory where applicable [footnote 46] |
 | **QUALDATA** | `MA46` | Keyword mandatory where applicable [footnote 46] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **EXTNAME** | `MA65` | Keyword mandatory where applicable [footnote 65] |
 
 ## Referenced footnotes

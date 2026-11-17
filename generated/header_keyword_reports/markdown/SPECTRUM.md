@@ -122,11 +122,11 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **SNR** | `MM` | Keyword mandatory |
 | **SPEC_RES** | `MM` | Keyword mandatory |
 | **STREHL** | `MA51` | Keyword mandatory where applicable [footnote 51] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ARCFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ORIGFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
+| P3ORIG | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **NOESODAT** | `MA59` | Keyword mandatory where applicable [footnote 59] |
 
 ### Extension HDU
@@ -144,11 +144,8 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **TMID** | `MM` | Keyword mandatory |
 | **SPEC_VAL** | `MM` | Keyword mandatory |
 | **SPEC_BW** | `MM` | Keyword mandatory |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **TFIELDS** | `MM` | Keyword mandatory |
 | **TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)** | `MM` | Keyword mandatory |
 | **TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)** | `MM` | Keyword mandatory |

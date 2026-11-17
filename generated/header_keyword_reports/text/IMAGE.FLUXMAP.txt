@@ -108,21 +108,18 @@ STOKES: Contact Phase 3 support to determine whether the keyword is required
 ABMAGLIM: Keyword not allowed: the Phase 3 system will reject the file
 SKY_RES: Keyword mandatory
 SKY_RERR: Keyword mandatory where applicable [footnote 50]
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+ARCFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+ORIGFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
+P3ORIG: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 NOESODAT: Keyword mandatory where applicable [footnote 59]
 
 ------------------------------
 IMAGE.FLUXMAP - Extension HDU
 ------------------------------
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
 EXTNAME: Keyword mandatory where applicable [footnote 65]
 
 ------------------------------
