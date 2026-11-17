@@ -34,7 +34,6 @@ OBSTECH
 PROCSOFT
 REFERENC
 PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN
-ABMAGLIM
 STREHL
 CHECKSUM
 DATASUM
@@ -85,13 +84,12 @@ PROCSOFT: Keyword mandatory
 REFERENC: Keyword mandatory [footnote 40]
 PROVi (for example: PROV1, PROV2, PROV3, etc.) or PROVXTN: Keyword mandatory for ESO files
 STOKES: Contact Phase 3 support to determine whether the keyword is required
-ABMAGLIM: Keyword mandatory
 STREHL: Keyword mandatory where applicable [footnote 51]
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+ARCFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+ORIGFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
+P3ORIG: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 NOESODAT: Keyword mandatory where applicable [footnote 59]
 
 ------------------------------
@@ -104,11 +102,8 @@ ABMAGLIM: Keyword mandatory
 ABMAGSAT: Keyword mandatory
 PSF_FWHM: Keyword mandatory
 ELLIPTIC: Keyword mandatory [footnote 49]
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
 TFIELDS: Keyword mandatory
 TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.): Keyword mandatory
 TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.): Keyword mandatory

@@ -40,6 +40,9 @@ SPEC_ERR
 SPEC_SYE
 CONTENT
 INSMODE
+BASE_MIN
+BASE_MAX
+NUM_CHAN
 VIS2ERR
 T3PHIERR
 SPEC_RES
@@ -91,25 +94,25 @@ SPEC_ERR: Keyword mandatory
 SPEC_SYE: Keyword mandatory
 CONTENT: Keyword mandatory
 INSMODE: Keyword mandatory
+BASE_MIN: Keyword mandatory
+BASE_MAX: Keyword mandatory
+NUM_CHAN: Keyword mandatory
 VIS2ERR: Keyword mandatory
 T3PHIERR: Keyword mandatory
 STOKES: Contact Phase 3 support to determine whether the keyword is required
 SPEC_RES: Keyword mandatory
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+ARCFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+ORIGFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
+P3ORIG: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 NOESODAT: Keyword mandatory where applicable [footnote 59]
 
 ------------------------------
 VISIBILITY - Extension HDU
 ------------------------------
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
 TFIELDS: Keyword mandatory
 TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.): Keyword mandatory
 TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.): Keyword mandatory

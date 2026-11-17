@@ -108,11 +108,11 @@ SPEC_RES: Keyword mandatory
 SKY_RES: Keyword mandatory
 SKY_RERR: Keyword mandatory where applicable [footnote 50]
 STREHL: Keyword mandatory where applicable [footnote 51]
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+ARCFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+ORIGFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
+P3ORIG: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 NOESODAT: Keyword mandatory where applicable [footnote 59]
 
 ------------------------------
@@ -133,11 +133,8 @@ HDUVERS: Keyword mandatory
 SCIDATA: Keyword mandatory where applicable [footnote 46]
 ERRDATA: Keyword mandatory where applicable [footnote 46]
 QUALDATA: Keyword mandatory where applicable [footnote 46]
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
 EXTNAME: Keyword mandatory where applicable [footnote 65]
 
 ------------------------------

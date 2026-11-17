@@ -56,6 +56,8 @@ NOESODAT
 ------------------------------
 CATALOG - Extension HDU mandatory keyword checklist
 ------------------------------
+CHECKSUM
+DATASUM
 TFIELDS
 TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)
 TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)
@@ -100,13 +102,13 @@ ABMAGLIM: Keyword mandatory where applicable [footnote 47]
 MAGLIMi (for example: MAGLIM1, MAGLIM2, MAGLIM3, etc.): Keyword mandatory where applicable [footnote 48]
 SKY_RES: Keyword mandatory where applicable [footnote 45]
 SKY_RERR: Keyword mandatory where applicable [footnote 50]
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
+ARCFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 CHECKSUM: Keyword mandatory
 DATASUM: Keyword mandatory
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+ORIGFILE: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
+P3ORIG: Reserved keyword. If present, modified by the Phase 3 system during the archiving process
 FPRAia: Keyword mandatory where applicable [footnote 54]
-FPDEia: Keyword mandatory where applicable [footnote 53]
+FPDEia: Keyword mandatory where applicable [footnote 54]
 SKYSQDEG: Keyword mandatory where applicable [footnote 54]
 M_EPOCH: Keyword mandatory where applicable [footnote 55]
 APMATCHD: Keyword mandatory where applicable [footnote 56]
@@ -122,9 +124,8 @@ EXTLEVEL: Keyword not allowed: the Phase 3 system will reject the file
 ------------------------------
 CATALOG - Extension HDU
 ------------------------------
-ARCFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-ORIGFILE: Keyword recommended; it means applicable unless you have a good reason to not use it
-P3ORIG: Keyword recommended; it means applicable unless you have a good reason to not use it
+CHECKSUM: Keyword mandatory
+DATASUM: Keyword mandatory
 TFIELDS: Keyword mandatory
 TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.): Keyword mandatory
 TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.): Keyword mandatory
@@ -156,7 +157,6 @@ CATALOG - Referenced footnotes
 47: For photometric catalogues. And if there is more than one filter, it is not applicable. Use MAGLIMi instead.
 48: For photometric catalogues with more than one filter.
 50: Applicable to the case when SKY_RES is expected to vary within the data collection due to the way it is estimated (see footnote 18).
-53: Not mandatory in case of complex footprints.
 54: Does not apply to spectroscopic catalogues for which no coverage pattern exists.
 55: Applicable to multi-epoch catalogues formatted according to section 12.5.1 only.
 56: For aperture-matched catalogues only.

@@ -38,6 +38,9 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 - [ ] **SPEC_SYE**
 - [ ] **CONTENT**
 - [ ] **INSMODE**
+- [ ] **BASE_MIN**
+- [ ] **BASE_MAX**
+- [ ] **NUM_CHAN**
 - [ ] **VIS2ERR**
 - [ ] **T3PHIERR**
 - [ ] **SPEC_RES**
@@ -91,26 +94,26 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **SPEC_SYE** | `MM` | Keyword mandatory |
 | **CONTENT** | `MM` | Keyword mandatory |
 | **INSMODE** | `MM` | Keyword mandatory |
+| **BASE_MIN** | `MM` | Keyword mandatory |
+| **BASE_MAX** | `MM` | Keyword mandatory |
+| **NUM_CHAN** | `MM` | Keyword mandatory |
 | **VIS2ERR** | `MM` | Keyword mandatory |
 | **T3PHIERR** | `MM` | Keyword mandatory |
 | STOKES | `SU` | Contact Phase 3 support to determine whether the keyword is required |
 | **SPEC_RES** | `MM` | Keyword mandatory |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ARCFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ORIGFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
+| P3ORIG | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **NOESODAT** | `MA59` | Keyword mandatory where applicable [footnote 59] |
 
 ### Extension HDU
 
 | Keyword | Requirement | Meaning |
 | --- | --- | --- |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **TFIELDS** | `MM` | Keyword mandatory |
 | **TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)** | `MM` | Keyword mandatory |
 | **TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)** | `MM` | Keyword mandatory |
@@ -165,9 +168,9 @@ Lines prefixed with `*` are mandatory, mandatory for ESO files, or mandatory whe
 * VIS2ERR              = 0.00645255551027164
   VISPHERR             = 0.243077231536286
 * T3PHIERR             = 0.381822879345889
-  BASE_MAX             = 129.73
-  BASE_MIN             = 46.624
-  NUM_CHAN             = 233
+* BASE_MAX             = 129.73
+* BASE_MIN             = 46.624
+* NUM_CHAN             = 233
 * WAVELMAX             = 2482.19819676265
 * WAVELMIN             = 1967.8018090552
   SPEC_BIN             = 4.39655156725394

@@ -53,6 +53,8 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 
 ### Extension HDU
 
+- [ ] **CHECKSUM**
+- [ ] **DATASUM**
 - [ ] **TFIELDS**
 - [ ] **TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)**
 - [ ] **TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)**
@@ -100,13 +102,13 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **MAGLIMi (for example: MAGLIM1, MAGLIM2, MAGLIM3, etc.)** | `MA48` | Keyword mandatory where applicable [footnote 48] |
 | **SKY_RES** | `MA45` | Keyword mandatory where applicable [footnote 45] |
 | **SKY_RERR** | `MA50` | Keyword mandatory where applicable [footnote 50] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ARCFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ORIGFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
+| P3ORIG | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **FPRAia** | `MA54` | Keyword mandatory where applicable [footnote 54] |
-| **FPDEia** | `MA53` | Keyword mandatory where applicable [footnote 53] |
+| **FPDEia** | `MA54` | Keyword mandatory where applicable [footnote 54] |
 | **SKYSQDEG** | `MA54` | Keyword mandatory where applicable [footnote 54] |
 | **M_EPOCH** | `MA55` | Keyword mandatory where applicable [footnote 55] |
 | **APMATCHD** | `MA56` | Keyword mandatory where applicable [footnote 56] |
@@ -123,9 +125,8 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 
 | Keyword | Requirement | Meaning |
 | --- | --- | --- |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| **CHECKSUM** | `MM` | Keyword mandatory |
+| **DATASUM** | `MM` | Keyword mandatory |
 | **TFIELDS** | `MM` | Keyword mandatory |
 | **TTYPEi (for example: TTYPE1, TTYPE2, TTYPE3, etc.)** | `MM` | Keyword mandatory |
 | **TFORMi (for example: TFORM1, TFORM2, TFORM3, etc.)** | `MM` | Keyword mandatory |
@@ -156,7 +157,6 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 47. For photometric catalogues. And if there is more than one filter, it is not applicable. Use MAGLIMi instead.
 48. For photometric catalogues with more than one filter.
 50. Applicable to the case when SKY_RES is expected to vary within the data collection due to the way it is estimated (see footnote 18).
-53. Not mandatory in case of complex footprints.
 54. Does not apply to spectroscopic catalogues for which no coverage pattern exists.
 55. Applicable to multi-epoch catalogues formatted according to section 12.5.1 only.
 56. For aperture-matched catalogues only.
@@ -614,6 +614,6 @@ Lines prefixed with `*` are mandatory, mandatory for ESO files, or mandatory whe
 * TTYPE75              = 'HA6562_LUM_CORR'
 * TFORM75              = 'D'
 * TUNIT75              = 'erg/s'
-  CHECKSUM             = 'V7akX4RhV4XhV4Xh'
-  DATASUM              = '1426465751'
+* CHECKSUM             = 'V7akX4RhV4XhV4Xh'
+* DATASUM              = '1426465751'
 ```

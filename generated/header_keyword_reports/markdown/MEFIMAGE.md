@@ -101,11 +101,11 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | DEC_ERR | `NO` | Keyword not allowed: the Phase 3 system will reject the file |
 | STOKES | `SU` | Contact Phase 3 support to determine whether the keyword is required |
 | **STREHL** | `MA51` | Keyword mandatory where applicable [footnote 51] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ARCFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
+| ORIGFILE | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
+| P3ORIG | `RS` | Reserved keyword. If present, modified by the Phase 3 system during the archiving process |
 | **NDIT** | `MA52` | Keyword mandatory where applicable [footnote 52] |
 | **NJITTER** | `MA52` | Keyword mandatory where applicable [footnote 52] |
 | **NOFFSETS** | `MA52` | Keyword mandatory where applicable [footnote 52] |
@@ -131,11 +131,8 @@ Mandatory checklists include keywords that are always mandatory, mandatory for E
 | **ABMAGSAT** | `MM` | Keyword mandatory |
 | **PSF_FWHM** | `MM` | Keyword mandatory |
 | **ELLIPTIC** | `M49` | Keyword mandatory [footnote 49] |
-| ARCFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **CHECKSUM** | `MM` | Keyword mandatory |
 | **DATASUM** | `MM` | Keyword mandatory |
-| ORIGFILE | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
-| P3ORIG | `RE` | Keyword recommended; it means applicable unless you have a good reason to not use it |
 | **EXTNAME** | `MA65` | Keyword mandatory where applicable [footnote 65] |
 
 ## Referenced footnotes

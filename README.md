@@ -41,6 +41,22 @@ table_footnotes.csv
 table_legend.csv
 ```
 
+The tables transcribe Table 8 (section 13) of the ESO Science Data Products
+Standard v8 (ESO-044286), with these deliberate differences:
+
+- `CHECKSUM` and `DATASUM` are mandatory in the CATALOG extension header.
+  Table 8 marks them only in the primary header for CATALOG, but every other
+  product type has them in both headers, and section 5.12 requires a checksum
+  for each HDU.
+- `ARCFILE`, `ORIGFILE` and `P3ORIG` use the code `RS` (reserved keyword,
+  overwritten by the Phase 3 system during archiving). Table 8 states this in
+  a note across the whole row and does not give them a legend code. Section
+  5.12 also says `ORIGFILE` must not be added to extension headers.
+- `TZEROi`, `TSCALi`, `EXTVER` and `EXTLEVEL` are not allowed in the primary
+  or the extension header of catalogue products. Table 8 shows them in
+  primary-header (white) cells, but section 12.2 forbids them in the
+  catalogue table definition, which lives in the extension.
+
 ## Usage
 
 Run the script with an ESO product type:
